@@ -1,0 +1,32 @@
+[
+  {
+    "icon": "Blog",
+    "name": "博客",
+    "link": "https://blog.101jc.com/"
+  },
+  {
+    "icon": "Book",
+    "name": "个人知识库",
+    "link": "https://lib.101jc.com/"
+  },
+  {
+    "icon": "LaptopCode",
+    "name": "101检测助手",
+    "link": "https://zs.101jc.com"
+  },
+  {
+    "icon": "Fire",
+    "name": "实用教程",
+    "link": "https://blog.101jc.com/categories/shi-yong-jiao-cheng"
+  },
+  {
+    "icon": "CompactDisc",
+    "name": "关于我",
+    "link": "https://blog.101jc.com/about"
+  },
+  {
+    "icon": "Compass",
+    "name": "更新日志",
+    "link": "https://log.101jc.com/"
+  }
+]
