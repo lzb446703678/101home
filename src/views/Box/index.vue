@@ -23,7 +23,7 @@
     <div class="content">
       <!-- 可在此处自定义任意内容 -->
       <TimeCapsule />
-      <GithubProject />
+      <!-- <GithubProject /> -->
     </div>
   </div>
 </template>
