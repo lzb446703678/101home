@@ -25,14 +25,17 @@
       >
         <component :is="store.mobileOpenState ? CloseSmall : HamburgerButton" />
       </Icon>
-      <!-- 页脚 -->
-      
+      <!-- 页脚 -->      
       <Transition name="fade" mode="out-in">
+        
         <Footer v-show="!store.backgroundShow && !store.setOpenState" />
       </Transition>
     </main>
   </Transition>
 </template>
+
+
+
 <script setup>
 import { helloInit, checkDays } from "@/utils/getTime.js";
 import { HamburgerButton, CloseSmall } from "@icon-park/vue-next";
@@ -47,6 +50,8 @@ import Box from "@/views/Box/index.vue";
 import MoreSet from "@/views/MoreSet/index.vue";
 import cursorInit from "@/utils/cursor.js";
 import config from "@/../package.json";
+
+
 
 const store = mainStore();
 
