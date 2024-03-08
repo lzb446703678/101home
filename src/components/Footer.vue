@@ -2,6 +2,7 @@
   <footer id="footer" :class="store.footerBlur ? 'blur' : null">
     <Transition name="fade" mode="out-in">
       <div v-if="!store.playerState || !store.playerLrcShow" class="power">
+        
         <span>
           Copyright&nbsp;&copy;
           <span v-if="siteStartDate?.length >= 4" class="site-start">
