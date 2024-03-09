@@ -1,12 +1,12 @@
 [
   {
-    "icon": "Blog",
-    "name": "博客",
-    "link": "https://blog.101jc.com/"
+    "icon": "Fire",
+    "name": "101导航",
+    "link": "https://tab.101jc.com"
   },
   {
     "icon": "Book",
-    "name": "个人知识库",
+    "name": "101知识库",
     "link": "https://lib.101jc.com/"
   },
   {
@@ -15,9 +15,9 @@
     "link": "https://zs.101jc.com"
   },
   {
-    "icon": "Fire",
-    "name": "实用教程",
-    "link": "https://blog.101jc.com/categories/shi-yong-jiao-cheng"
+    "icon": "Blog",
+    "name": "博客",
+    "link": "https://blog.101jc.com/"
   },
   {
     "icon": "CompactDisc",
