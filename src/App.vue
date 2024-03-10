@@ -8,9 +8,16 @@
     <main id="main" v-if="store.imgLoadStatus">
       <div class="container" v-show="!store.backgroundShow">
         <section class="all" v-show="!store.setOpenState">
-          <MainLeft />
-          <MainRight v-show="!store.boxOpenState" />
-          <Box v-show="store.boxOpenState" />
+          <div class="center-container">
+            <MainLeft />
+            <MainRight v-show="!store.boxOpenState" />
+
+          </div>
+          <div class="timeline-container">
+            <Timeline v-show="!store.boxOpenState" />
+          </div>
+          
+
         </section>
         <section class="more" v-show="store.setOpenState" @click="store.setOpenState = false">
           <MoreSet />
@@ -44,6 +51,7 @@ import { Icon } from "@vicons/utils";
 import Loading from "@/components/Loading.vue";
 import MainLeft from "@/views/Main/Left.vue";
 import MainRight from "@/views/Main/Right.vue";
+import Timeline from "@/views/Main/Timeline.vue";
 import Background from "@/components/Background.vue";
 import Footer from "@/components/Footer.vue";
 import Box from "@/views/Box/index.vue";
@@ -140,13 +148,32 @@ onBeforeUnmount(() => {
     height: 100vh;
     margin: 0 auto;
     .all {
-      width: 100%;
-      height: 100%;
-      padding: 0 0.75rem;
       display: flex;
-      flex-direction: row;
       justify-content: center;
       align-items: center;
+      height: 100%;
+    }
+    .center-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .placeholder {
+      width: 100%;
+      flex-grow: 1; // 占用剩余空间
+    }
+    .timeline-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .timeline-container {
+        display: none; /* 隐藏Timeline组件 */
+      }
     }
     .more {
       position: fixed;

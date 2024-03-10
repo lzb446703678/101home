@@ -39,7 +39,7 @@ const siteLogo = import.meta.env.VITE_SITE_MAIN_LOGO;
 // 站点链接
 const siteUrl = computed(() => {
   const url = import.meta.env.VITE_SITE_URL;
-  if (!url) return "imsyy.top".split(".");
+  if (!url) return "101jc.com".split(".");
   // 判断协议前缀
   if (url.startsWith("http://") || url.startsWith("https://")) {
     const urlFormat = url.replace(/^(https?:\/\/)/, "");
@@ -95,11 +95,11 @@ watch(
     max-width: 460px;
     .logo-img {
       border-radius: 50%;
-      width: 120px;
+      width: 175px;
     }
     .name {
       width: 100%;
-      padding-left: 22px;
+      padding-left: 0px;
       transform: translateY(-8px);
       font-family: "Pacifico-Regular";
 
