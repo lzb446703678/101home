@@ -102,6 +102,7 @@ import {
   Book,
   Fire,
   LaptopCode,
+  Toolbox,
 } from "@vicons/fa";
 
 ...
