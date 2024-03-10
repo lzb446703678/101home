@@ -19,7 +19,7 @@ export default {
       { date: '2024-03-10', description: '制作了动态头像并更新了主页布局' },
       { date: '2024-03-09', description: '搭建IT工具箱' },
       { date: '2024-03-08', description: '搭建站点监测' },
-        { date: '2024-03-05', description: '搭建更新日志' },
+        { date: '2024-03-07', description: '搭建更新日志' },
         { date: '2024-03-06', description: '搭建101知识库' },
         { date: '2024-03-05', description: '学习Github并搭建个人主页' },
         { date: '2024-01-29', description: '发布文章数量达到10篇' },
