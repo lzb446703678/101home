@@ -163,7 +163,7 @@ watch(
       pointer-events: none;
     }
   }
-  @media (max-width: 390px) {
+  @media (max-width: 300px) {
     .logo {
       flex-direction: column;
       .logo-img {
