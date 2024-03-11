@@ -54,7 +54,7 @@ export default {
 }
 #line {
     width: 400px;
-    height: 400px;
+    height: 450px;
     font-size: 13px;
     padding-left: 100px;
     scroll-snap-type: y mandatory;

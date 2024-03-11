@@ -22,7 +22,7 @@
     </transition>
     <div class="content">
       <!-- 可在此处自定义任意内容 -->
-      <TimeCapsule />
+      <Waline />
       <!-- <GithubProject /> -->
     </div>
   </div>
@@ -32,6 +32,7 @@
 import { CloseOne, SettingTwo } from "@icon-park/vue-next";
 import { mainStore } from "@/store";
 import TimeCapsule from "@/components/TimeCapsule.vue";
+import Waline from '@/components/Waline.vue';
 import GithubProject from "@/components/GithubProject.vue";
 
 const store = mainStore();
@@ -78,7 +79,9 @@ const closeShow = ref(false);
   .content {
     padding: 30px;
     width: 100%;
-    height: 100%;
+    height: 50vh;
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
   }
 }
 </style>
