@@ -80,6 +80,8 @@ const loadComplete = () => {
   });
 };
 
+
+
 // 监听宽度变化
 watch(
   () => store.innerWidth,
@@ -95,14 +97,29 @@ onMounted(() => {
   cursorInit();
 
   // 屏蔽右键
-  document.oncontextmenu = () => {
+// 变量用于跟踪右键点击的状态
+let rightClickMessageShown = false;
+
+// 右键点击事件处理函数
+document.oncontextmenu = (e) => {
+  e.preventDefault(); // 阻止默认的右键菜单
+
+  // 切换右键点击状态
+  rightClickMessageShown = !rightClickMessageShown;
+
+  // 根据状态设置store.boxOpenState和显示消息
+  if (rightClickMessageShown) {
     ElMessage({
-      message: "为了浏览体验，本站禁用右键",
+      message: "期待你的留言",
       grouping: true,
       duration: 2000,
     });
-    return false;
-  };
+    store.boxOpenState = true;
+  } else {
+    store.boxOpenState = false;
+  }
+};
+
 
   // 鼠标中键事件
   window.addEventListener("mousedown", (event) => {
@@ -114,6 +131,9 @@ onMounted(() => {
       });
     }
   });
+
+
+
 
   // 监听当前页面宽度
   getWidth();

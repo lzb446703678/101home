@@ -79,9 +79,10 @@ const closeShow = ref(false);
   .content {
     padding: 30px;
     width: 100%;
-    height: 50vh;
+    height: 75vh;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    padding-top: 50px;
   }
 }
 </style>

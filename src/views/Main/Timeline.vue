@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       events: [
+      { date: '2024-03-11', description: '添加了主页留言板功能' },
       { date: '2024-03-10', description: '制作了动态头像并更新了主页布局' },
       { date: '2024-03-09', description: '搭建IT工具箱' },
       { date: '2024-03-08', description: '搭建站点监测' },
