@@ -17,7 +17,7 @@
         <div class="iconTip"></div>
       </a>
       <a href="javascript:void(0)" @click="toggleMessageBox" @mouseenter="socialTip = '留言'">
-      <img class="icon" src="https://img.101jc.com/img/liuyan.png!yuantu" height="24" />
+      <img class="icon-ly" src="https://img.101jc.com/img/liuyan.png!yuantu" height="24" />
       <div class="iconTip"></div>
     </a>
     </div>
@@ -121,6 +121,16 @@ onUnmounted(() => {
           transform: scale(1);
         }
       }
+      .icon-ly {
+        margin: 0 12px;
+        transition: transform 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
+        &:active {
+          transform: scale(1);
+        }
+      }
     }
   }
   .tip {
@@ -128,6 +138,19 @@ onUnmounted(() => {
     margin-right: 12px;
     animation: fade 0.5s;
   }
+  @media screen and (max-width: 768px) {
+    .icon-ly {
+        display: none !important;
+        margin: 0 12px;
+        transition: transform 0.3s;
+        &:hover {
+          transform: scale(1.1);
+        }
+        &:active {
+          transform: scale(1);
+        }
+      }
+    }
   @media (min-width: 768px) {
     &:hover {
       background-color: #00000040;

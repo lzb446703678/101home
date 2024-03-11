@@ -100,16 +100,12 @@ onMounted(() => {
   // 屏蔽右键
 // 变量用于跟踪右键点击的状态
 let rightClickMessageShown = false;
-
 // 右键点击事件处理函数
 document.oncontextmenu = (e) => {
   e.preventDefault(); // 阻止默认的右键菜单
-
-  // 切换右键点击状态
-  rightClickMessageShown = !rightClickMessageShown;
-
-  // 根据状态设置store.boxOpenState和显示消息
-  if (rightClickMessageShown) {
+  // 查询store.boxOpenState的当前值
+  if (store.boxOpenState === false) {
+    // 如果是false，则将其改为true并显示消息
     ElMessage({
       message: "期待你的留言",
       grouping: true,
@@ -117,8 +113,11 @@ document.oncontextmenu = (e) => {
     });
     store.boxOpenState = true;
   } else {
+    // 如果是true，则将其改为false
     store.boxOpenState = false;
   }
+  // 切换右键点击状态
+  rightClickMessageShown = !rightClickMessageShown;
 };
 
 
