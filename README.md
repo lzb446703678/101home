@@ -6,7 +6,7 @@
 
 本项目修改自[home](https://github.com/imsyy/home)项目，原作者是[imsyy](https://github.com/imsyy)。
 
-![旅者Bin的主页](public\screenshots\main.png)
+![旅者Bin的主页](public/screenshots/main.png)
 
 ### 我的Demo
 
@@ -24,11 +24,11 @@
 
 1. 添加了主页的更新日志功能
 
-![日志](public\screenshots\rizhi.png)
+![日志](public/screenshots/rizhi.png)
 
 2. 将原来的时光胶囊组件替换成了留言板
 
-![留言板](public\screenshots\liuyanban.png)
+![留言板](public/screenshots/liuyanban.png)
 
 3. 添加了微信二维码和留言板按钮
 
