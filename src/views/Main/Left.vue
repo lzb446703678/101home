@@ -16,7 +16,7 @@ const store = mainStore();
 .left {
   // flex: 1 0 0%;
   width: 50%;
-  margin-right: 10px;
+  margin-right: 0px;
   transform: translateY(20px);
   &.hidden {
     display: none;

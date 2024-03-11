@@ -17,7 +17,7 @@
             <Box v-show="store.boxOpenState" />
           </div>
 
-
+          
           
 
         </section>
@@ -41,6 +41,7 @@
       </Transition>
     </main>
   </Transition>
+  
 </template>
 
 

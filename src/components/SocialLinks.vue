@@ -8,20 +8,65 @@
         :href="item.url"
         target="_blank"
         @mouseenter="socialTip = item.tip"
-        @mouseleave="socialTip = '通过这里联系我吧'"
+        @mouseleave="socialTip = ''"
       >
         <img class="icon" :src="item.icon" height="24" />
       </a>
+      <a  href="javascript:void(0)" @click="showWechatImage" @mouseenter="socialTip = '添加我的微信'">
+        <img class="icon" src="https://img.101jc.com/img/wechaticon2.png!yuantu" height="24" />
+        <div class="iconTip"></div>
+      </a>
+      <a href="javascript:void(0)" @click="toggleMessageBox" @mouseenter="socialTip = '期待你的留言'">
+      <img class="icon" src="https://img.101jc.com/img/liuyan.png!yuantu" height="24" />
+      <div class="iconTip"></div>
+    </a>
     </div>
-    <span class="tip">{{ socialTip }}</span>
+    <span class="tip" v-show="!isWechatImageVisible">{{ socialTip }}</span>
+    <div v-show="isWechatImageVisible" class="wechat-popup" @click.stop>
+      <img src="https://img.101jc.com/img/wechat.jpg!yuantu" height="271" width="200" @click.stop />
+    </div>
   </div>
 </template>
-
 <script setup>
+import { ref, onMounted, onUnmounted } from 'vue';
 import socialLinks from "@/assets/socialLinks.json";
+import { mainStore } from "@/store";
+
+// 获取mainStore的实例
+const store = mainStore();
+// 触发自定义事件来通知父组件切换留言框的状态
+const toggleMessageBox = () => {
+  store.boxOpenState = !store.boxOpenState;
+};
+
 
 // 社交链接提示
-const socialTip = ref("通过这里联系我吧");
+const socialTip = ref("");
+// 控制微信图片的显示
+const isWechatImageVisible = ref(false);
+// 显示微信图片的函数
+const showWechatImage = () => {
+  isWechatImageVisible.value = true;
+};
+// 隐藏微信图片的函数
+const hideWechatImage = () => {
+  isWechatImageVisible.value = false;
+};
+// 监听文档的点击事件
+const handleDocumentClick = (event) => {
+  // 检查点击的目标是否是微信图片或者微信图片的弹出层
+  if (event.target.className !== 'wechat-popup' && event.target.tagName !== 'IMG') {
+    hideWechatImage();
+  }
+};
+// 在组件挂载时添加事件监听器
+onMounted(() => {
+  document.addEventListener('click', handleDocumentClick);
+});
+// 在组件卸载时移除事件监听器
+onUnmounted(() => {
+  document.removeEventListener('click', handleDocumentClick);
+});
 </script>
 
 <style lang="scss" scoped>
@@ -51,6 +96,15 @@ const socialTip = ref("通过这里联系我吧");
       display: none !important;
     }
   }
+
+  .wechat-popup {
+  position: fixed;
+  bottom: -200px; /* 向下移动100px */
+  right: 10px;
+  z-index: 0;
+  /* 其他样式 */
+}
+
 
   .link {
     display: flex;
