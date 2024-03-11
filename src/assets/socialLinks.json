@@ -2,25 +2,25 @@
   {
     "name": "Github",
     "icon": "https://img.101jc.com/img/github.png!yuantu",
-    "tip": "去 Github 看看",
+    "tip": "Github",
     "url": "https://github.com/lzb446703678"
   },
   {
     "name": "BiliBili",
     "icon": "https://img.101jc.com/img/bilibili.png!yuantu",
-    "tip": "(゜-゜)つロ 干杯 ~",
+    "tip": "B站",
     "url": "https://space.bilibili.com/595639027"
   },
   {
     "name": "QQ",
     "icon": "https://img.101jc.com/img/qq.png!yuantu",
-    "tip": "点击添加好友",
+    "tip": "QQ",
     "url": "https://res.abeim.cn/api/qq/?qq=446703678"
   },
   {
     "name": "Email",
     "icon": "https://img.101jc.com/img/email.png!yuantu",
-    "tip": "446703678@qq.com",
+    "tip": "邮箱",
     "url": "mailto:446703678@qq.com"
   }
 ]

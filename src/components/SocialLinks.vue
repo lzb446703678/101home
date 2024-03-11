@@ -12,11 +12,11 @@
       >
         <img class="icon" :src="item.icon" height="24" />
       </a>
-      <a  href="javascript:void(0)" @click="showWechatImage" @mouseenter="socialTip = '添加我的微信'">
+      <a  href="javascript:void(0)" @click="showWechatImage" @mouseenter="socialTip = '微信'">
         <img class="icon" src="https://img.101jc.com/img/wechaticon2.png!yuantu" height="24" />
         <div class="iconTip"></div>
       </a>
-      <a href="javascript:void(0)" @click="toggleMessageBox" @mouseenter="socialTip = '期待你的留言'">
+      <a href="javascript:void(0)" @click="toggleMessageBox" @mouseenter="socialTip = '留言'">
       <img class="icon" src="https://img.101jc.com/img/liuyan.png!yuantu" height="24" />
       <div class="iconTip"></div>
     </a>
@@ -99,10 +99,9 @@ onUnmounted(() => {
 
   .wechat-popup {
   position: fixed;
-  bottom: -200px; /* 向下移动100px */
+  bottom: 0px; 
   right: 10px;
   z-index: 0;
-  /* 其他样式 */
 }
 
 
