@@ -1,21 +1,42 @@
-简体中文 | [English](./README_EN.md)
+<!-- 简体中文 | [English](./README_EN.md) -->
 
 <p>
-<strong><h2>無名の主页</h2></strong>
-简单的小主页，原来的看够了，重新弄了一个
+<strong><h2>简洁大气兼顾实用的个人主页Homepage</h2></strong>
 </p>
 
-![無名の主页](/screenshots/main.jpg)
+本项目修改自[home](https://github.com/imsyy/home)项目，原作者是[imsyy](https://github.com/imsyy)。
 
->主页的 Logo 字体已经过压缩，若用本站 Logo 以外的字母会变回默认字体，这里是 [完整字体](https://file.imsyy.top/font/Other/Pacifico-Regular.ttf)，若无法下载，可将字体目录下的 `Pacifico-Regular-all.ttf` 进行替换
+![旅者Bin的主页](public\screenshots\main.png)
 
-### Demo
+### 我的Demo
 
 >由于 CDN 缓存原因，查看最新效果可能需要 `Ctrl` + `F5` 强制刷新浏览器缓存
+
+- [旅者Bin的主页](https://101jc.com)
+
+### 原作者Demo
 
 - [無名の主页](https://www.imsyy.top)
 - [無名の主页 - Dev](https://home-imsyy.vercel.app)
 - [無名の主页 - 备用线路](https://home-5iw.pages.dev)
+
+### 相比原项目主要修改的内容
+
+1. 添加了主页的更新日志功能
+
+![日志](public\screenshots\rizhi.png)
+
+2. 将原来的时光胶囊组件替换成了留言板
+
+![留言板](public\screenshots\liuyanban.png)
+
+3. 添加了微信二维码和留言板按钮
+
+4. 修改了鼠标右键的功能，现在使用鼠标右键可以打开及关闭留言板
+
+---
+
+## 下面是原作者对于项目的介绍
 
 ### 功能
 
@@ -152,6 +173,8 @@ VITE_SONG_ID = "7452421335"
 
 ### 字体
 
+>主页的 Logo 字体已经过压缩，若用本站 Logo 以外的字母会变回默认字体，这里是 [完整字体](https://file.imsyy.top/font/Other/Pacifico-Regular.ttf)，若无法下载，可将字体目录下的 `Pacifico-Regular-all.ttf` 进行替换
+
 现采用 `HarmonyOS Sans` 开源字体，采用字体拆分，提升加载速度
 
 >由于本站 `CDN` 已开启防盗链，**非本站域名不可访问**，请将字体引入链接更改为下方内容，否则 **自定义字体将失效**
@@ -231,9 +254,3 @@ if (type == 0) {
 * [教书先生 API](https://api.oioweb.cn/doc/weather/GetWeather)
 * [高德开放平台](https://lbs.amap.com/)
 * [Hitokoto 一言](https://hitokoto.cn/)
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=imsyy/home&type=Date)](https://star-history.com/#imsyy/home&Date)
-
-<a title="SSL" target="_blank" href="https://myssl.com/seal/detail?domain=blog.imsyy.top"><img src="https://img.shields.io/badge/MySSL-安全认证-brightgreen"></a>&nbsp;<a title="CDN" target="_blank" href="https://cdnjs.com/"><img src="https://img.shields.io/badge/CDN-Cloudflare-blue"></a>&nbsp;<a title="Copyright" target="_blank" href="https://imsyy.top/"><img src="https://img.shields.io/badge/Copyright%20%C2%A9%202020--2023-%E7%84%A1%E5%90%8D-red"></a>
