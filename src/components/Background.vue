@@ -97,7 +97,7 @@ const imgLoadError = () => {
       fill: "#efefef",
     }),
   });
-  bgUrl.value = `/images/background${bgRandom}.jpg`;
+  bgUrl.value = `/images/beijing.mp4`;
 };
 
 onMounted(() => {
