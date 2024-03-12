@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       events: [
+      { date: '2024-03-12', description: '修改了首页日志的样式，突出显示了最新的日志记录' },
       { date: '2024-03-11', description: '添加了主页留言板功能，添加了微信二维码及留言板按钮' },
       { date: '2024-03-10', description: '制作了动态头像并更新了主页布局' },
       { date: '2024-03-09', description: '搭建IT工具箱' },
