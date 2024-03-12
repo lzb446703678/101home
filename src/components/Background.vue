@@ -90,12 +90,6 @@ const imgAnimationEnd = () => {
 // 图片显示失败
 const imgLoadError = () => {
   console.error("壁纸加载失败：", bgUrl.value);
-  ElMessage({
-    icon: h(Error, {
-      theme: "filled",
-      fill: "#efefef",
-    }),
-  });
   bgUrl.value = `https://img.101jc.com/img/background1.jpg!yuantu`;
 };
 
