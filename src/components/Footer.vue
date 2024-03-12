@@ -24,6 +24,7 @@
           &amp;
           {{ siteIcp }}
         </a>
+        <div id="LA-DATA-WIDGET-container"></div>
       </div>
       <div v-else class="lrc">
         <Transition name="fade" mode="out-in">
@@ -36,6 +37,7 @@
       </div>
     </Transition>
   </footer>
+
 </template>
 
 <script setup>
@@ -59,6 +61,19 @@ const siteUrl = computed(() => {
   }
   return url;
 });
+
+// 在组件挂载后，将统计脚本添加到页面上
+onMounted(() => {
+  // 创建脚本元素
+  const script = document.createElement('script');
+  script.id = "LA-DATA-WIDGET";
+  script.src = "https://v6-widget.51.la/v6/3HjGAq3ibCpbwWfo/quote.js?theme=0&f=12&display=0,1,1,1,1,1,1,1";
+  script.crossorigin = "anonymous";
+  script.charset = "UTF-8";
+  // 挂载脚本
+  document.getElementById('LA-DATA-WIDGET-container').appendChild(script);
+});
+
 </script>
 
 <style lang="scss" scoped>

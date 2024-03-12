@@ -91,7 +91,7 @@ export default {
   color: #ffffff; /* 第一个事件的日期颜色 */
 }
 .event-date {
-  color: #dddddd; /* 其他事件的日期颜色 */
+  color: #cccccc; /* 其他事件的日期颜色 */
 }
 .first-event-description {
   color: #ffffff; /* 第一个事件的描述颜色 */
