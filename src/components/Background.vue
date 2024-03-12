@@ -1,6 +1,7 @@
 <template>
   <div :class="store.backgroundShow ? 'cover show' : 'cover'">
     <img
+      v-if="!isVideo"
       v-show="store.imgLoadStatus"
       class="bg"
       alt="cover"
@@ -9,6 +10,18 @@
       @error.once="imgLoadError"
       @animationend="imgAnimationEnd"
     />
+    <video
+      v-else
+      autoplay
+      loop
+      muted
+      class="bg"
+      alt="cover"
+      :src="bgUrl"
+      @load="imgLoadComplete"
+      @error.once="imgLoadError"
+      @animationend="imgAnimationEnd"
+    ></video>
     <div :class="store.backgroundShow ? 'gray hidden' : 'gray'" />
     <Transition name="fade" mode="out-in">
       <a
@@ -26,7 +39,7 @@
 <script setup>
 import { mainStore } from "@/store";
 import { Error } from "@icon-park/vue-next";
-
+const isVideo = computed(() => bgUrl.value && bgUrl.value.toLowerCase().endsWith('.mp4'));
 const store = mainStore();
 const bgUrl = ref(null);
 const imgTimeout = ref(null);
@@ -39,7 +52,7 @@ const bgRandom = Math.floor(Math.random() * 10 + 1);
 // 更换壁纸链接
 const changeBg = (type) => {
   if (type == 0) {
-    bgUrl.value = `https://img.101jc.com/img/background1.jpg!yuantu`;
+    bgUrl.value = `https://img.101jc.com/img/beijing20240312.mp4`;
   } else if (type == 1) {
     bgUrl.value = "https://api.dujin.org/bing/1920.php";
   } else if (type == 2) {
