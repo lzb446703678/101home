@@ -91,13 +91,12 @@ const imgAnimationEnd = () => {
 const imgLoadError = () => {
   console.error("壁纸加载失败：", bgUrl.value);
   ElMessage({
-    message: "壁纸加载失败，已临时切换回默认",
     icon: h(Error, {
       theme: "filled",
       fill: "#efefef",
     }),
   });
-  bgUrl.value = `/images/beijing.mp4`;
+  bgUrl.value = `https://img.101jc.com/img/background1.jpg!yuantu`;
 };
 
 onMounted(() => {
