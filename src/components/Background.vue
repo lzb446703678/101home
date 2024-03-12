@@ -39,7 +39,7 @@
 <script setup>
 import { mainStore } from "@/store";
 import { Error } from "@icon-park/vue-next";
-const isVideo = computed(() => bgUrl.value && bgUrl.value.toLowerCase().endsWith('.mp4'));
+
 const store = mainStore();
 const bgUrl = ref(null);
 const imgTimeout = ref(null);
@@ -48,6 +48,8 @@ const emit = defineEmits(["loadComplete"]);
 // 壁纸随机数
 // 请依据文件夹内的图片个数修改 Math.random() 后面的第一个数字
 const bgRandom = Math.floor(Math.random() * 10 + 1);
+
+const isVideo = computed(() => bgUrl.value && bgUrl.value.toLowerCase().endsWith('.mp4'));
 
 // 更换壁纸链接
 const changeBg = (type) => {
@@ -75,6 +77,12 @@ const imgLoadComplete = () => {
 // 图片动画完成
 const imgAnimationEnd = () => {
   console.log("壁纸加载且动画完成");
+  imgTimeout.value = setTimeout(
+    () => {
+      store.setImgLoadStatus(true);
+    },
+    Math.floor(Math.random() * (600 - 300 + 1)) + 300,
+  );
   // 加载完成事件
   emit("loadComplete");
 };
@@ -130,6 +138,9 @@ onBeforeUnmount(() => {
       transform 0.3s;
     animation: fade-blur-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
     animation-delay: 0.45s;
+    &.video {
+    // 如果需要对视频背景进行特殊样式处理，可以在这里添加
+  }
   }
   .gray {
     opacity: 1;
