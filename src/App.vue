@@ -11,10 +11,10 @@
           <div class="center-container">
             <MainLeft />
             <MainRight v-show="!store.boxOpenState" />
-            <div class="timeline-container" v-show="!store.boxOpenState">
-            <Timeline />
-          </div>
             <Box v-show="store.boxOpenState" />
+          </div>
+          <div class="timeline-container" v-show="!store.boxOpenState">
+            <Timeline />
           </div>
 
           
@@ -191,6 +191,7 @@ onBeforeUnmount(() => {
       justify-content: center;
       align-items: center;
       display: block;
+      margin-left: auto;
     }
     @media (max-width: 768px) {
       .timeline-container {

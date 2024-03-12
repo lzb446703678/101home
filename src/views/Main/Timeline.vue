@@ -3,12 +3,13 @@
     <ul id="line">
       <li v-for="(event, index) in events" :key="index">
         <div class="focus"></div>
-        <div>{{ event.date }}</div>
-        <div>{{ event.description }}</div>
+        <div :class="{'first-event-date': index === 0, 'event-date': index !== 0}">{{ event.date }}</div>
+        <div :class="{'first-event-description': index === 0, 'event-description': index !== 0}">{{ event.description }}</div>
       </li>
     </ul>
   </div>
 </template>
+
 
 <script>
 export default {
@@ -56,16 +57,22 @@ export default {
 
 }
 #line {
-    width: 400px;
-    height: 450px;
+    width: 300px;
+    height: 500px;
     font-size: 13px;
     padding-left: 100px;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
-    scrollbar-width: none; /* 对于Firefox */
-    -ms-overflow-style: none; /* 对于Internet Explorer和Edge */
-    overflow-x: hidden;
+    /* 隐藏滚动条，但仍然允许滚动 */
+    -ms-overflow-style: none;  /* Internet Explorer和Edge */
+    scrollbar-width: none;  /* Firefox */
+    overflow: -moz-scrollbars-none; /* 旧的Mozilla浏览器 */
 }
+
+#line::-webkit-scrollbar {
+    display: none; /* 对于基于Webkit的浏览器，如Chrome、Safari等 */
+}
+
 #line li {
     list-style: none;
     position: relative;
@@ -79,6 +86,19 @@ export default {
     background-color: #aaffcd;
     animation: colorFlash 1s ease infinite;
 }
+.first-event-date {
+  color: #ffffff; /* 第一个事件的日期颜色 */
+}
+.event-date {
+  color: #dddddd; /* 其他事件的日期颜色 */
+}
+.first-event-description {
+  color: #ffffff; /* 第一个事件的描述颜色 */
+}
+.event-description {
+  color: #dddddd; /* 其他事件的描述颜色 */
+}
+
 @keyframes colorFlash {
   0% { background-color: #aaffcd; }
   50% { background-color: #00FDA1; }
