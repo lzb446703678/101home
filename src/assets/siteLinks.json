@@ -10,9 +10,9 @@
     "link": "https://lib.101jc.com/"
   },
   {
-    "icon": "LaptopCode",
-    "name": "101站点监测",
-    "link": "https://site.101jc.com"
+    "icon": "PhotoVideo",
+    "name": "时光相册",
+    "link": "https://pic.101jc.com"
   },
   {
     "icon": "Blog",
@@ -28,6 +28,11 @@
     "icon": "Compass",
     "name": "更新日志",
     "link": "https://log.101jc.com/"
+  },
+  {
+    "icon": "LaptopCode",
+    "name": "站点监测",
+    "link": "https://site.101jc.com"
   },
   {
     "icon": "Toolbox",
