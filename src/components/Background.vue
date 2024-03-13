@@ -54,7 +54,7 @@ const isVideo = computed(() => bgUrl.value && bgUrl.value.toLowerCase().endsWith
 // 更换壁纸链接
 const changeBg = (type) => {
   if (type == 0) {
-    bgUrl.value = `https://img.101jc.com/img/beijing20240312.mp4`;
+    bgUrl.value = `images/beijing20240312.mp4`;
   } else if (type == 1) {
     bgUrl.value = "https://api.dujin.org/bing/1920.php";
   } else if (type == 2) {
