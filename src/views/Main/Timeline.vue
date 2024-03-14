@@ -4,12 +4,11 @@
       <li v-for="(event, index) in events" :key="index">
         <div class="focus"></div>
         <div :class="{'first-event-date': index === 0, 'event-date': index !== 0}">{{ event.date }}</div>
-        <div :class="{'first-event-description': index === 0, 'event-description': index !== 0}">{{ event.description }}</div>
+        <div :class="{'first-event-description': index === 0, 'event-description': index !== 0}" v-html="getDescriptionHtml(event.description)"></div>
       </li>
     </ul>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -17,18 +16,19 @@ export default {
   data() {
     return {
       events: [
-      { date: '2024-03-13', description: '搭建了时光相册' },
+      { date: '2024-03-14', description: '更新了首页日志的样式，点击链接可跳转到对应站点或文章' },
+      { date: '2024-03-13', description: '搭建了[时光相册](https://pic.101jc.com/)' },
       { date: '2024-03-12', description: '修改了首页日志的样式，突出显示了最新的日志记录' },
       { date: '2024-03-11', description: '添加了主页留言板功能，添加了微信二维码及留言板按钮' },
       { date: '2024-03-10', description: '制作了动态头像并更新了主页布局' },
-      { date: '2024-03-09', description: '搭建IT工具箱' },
-      { date: '2024-03-08', description: '搭建站点监测' },
-        { date: '2024-03-07', description: '搭建更新日志' },
-        { date: '2024-03-06', description: '搭建101知识库' },
-        { date: '2024-03-05', description: '学习Github并搭建个人主页' },
+      { date: '2024-03-09', description: '搭建[IT工具箱](https://tool.101jc.com/)' },
+      { date: '2024-03-08', description: '搭建[站点监测](https://site.101jc.com/)' },
+        { date: '2024-03-07', description: '搭建[更新日志](https://log.101jc.com/)' },
+        { date: '2024-03-06', description: '搭建[101知识库](https://lib.101jc.com/)' },
+        { date: '2024-03-05', description: '学习Github并搭建[个人主页](https://101jc.com/)' },
         { date: '2024-01-29', description: '发布文章数量达到10篇' },
         { date: '2024-01-23', description: '利用腾讯云COS及Edgeone自建图床' },
-        { date: '2024-01-12', description: '使用Halo框架及Hao主题搭建博客' },
+        { date: '2024-01-12', description: '使用Halo框架及Hao主题搭建[博客](https://blog.101jc.com/)' },
         { date: '2023-11-18', description: '公安备案通过' },
         { date: '2023-11-13', description: '公安备案被拒并再次提交' },
         { date: '2023-11-10', description: '首次提交公安备案' },
@@ -44,8 +44,18 @@ export default {
       ],
     };
   },
+  methods: {
+  getDescriptionHtml(description) {
+    // 正则表达式匹配Markdown风格的链接
+    const regex = /\[([^\]]+)\]\((https?:\/\/[^\s]+)\)/g;
+    const html = description.replace(regex, '<a href="$2" target="_blank" style="color: #38BDF8;text-decoration: none; cursor: pointer !important;" class="custom-link" onmouseover="this.style.textDecoration=\'underline\'" onmouseout="this.style.textDecoration=\'none\'">$1</a>');
+  return html;
+  },
+},
 };
 </script>
+
+
 
 <style scoped>
 .left-div {
