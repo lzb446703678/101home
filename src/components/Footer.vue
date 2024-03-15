@@ -24,6 +24,9 @@
           &amp;
           {{ siteIcp }}
         </a>
+        <span class="hidden">
+          【本站已开启CDN缓存，使用 [Ctrl + F5] 可查看本站最新动态】
+        </span>
         <div id="LA-DATA-WIDGET-container"></div>
       </div>
       <div v-else class="lrc">
