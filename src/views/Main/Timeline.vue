@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       events: [
-      { date: '2024-03-15', description: '优化了评论组件的样式' },
+      { date: '2024-03-15', description: '优化了评论组件的样式，开启了评论审核功能' },
       { date: '2024-03-14', description: '更新了首页日志的样式，点击链接可跳转到对应站点或文章' },
       { date: '2024-03-13', description: '搭建了[时光相册](https://pic.101jc.com/)' },
       { date: '2024-03-12', description: '修改了首页日志的样式，突出显示了最新的日志记录' },
