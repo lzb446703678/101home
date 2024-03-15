@@ -18,7 +18,7 @@ onMounted(() => {
   // 动态添加Waline的CSS文件
   const link = document.createElement('link');
   link.rel = 'stylesheet';
-  link.href = 'src/style/waline.css';
+  link.href = 'https://img.101jc.com/img/waline.css';
   document.head.appendChild(link);
 
   // 初始化Waline
