@@ -13,21 +13,28 @@
           <a :href="siteUrl">{{ siteAnthor }}</a>
         </span>
         <!-- 以下信息请不要修改哦 -->
-        <span class="hidden">
+        <!-- <span class="hidden">
           &amp;&nbsp;Made&nbsp;by
           <a :href="config.github" target="_blank">
             {{ config.author }}
           </a>
-        </span>
+        </span> -->
         <!-- 站点备案 -->
         <a v-if="siteIcp" href="https://beian.miit.gov.cn" target="_blank">
-          &amp;
+          &nbsp | &nbsp
           {{ siteIcp }}
         </a>
+        <a v-if="siteGONGAN" class="hidden" href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank">
+          &nbsp | &nbsp
+          {{ siteGONGAN }}
+        </a>
         <span class="hidden">
-          【本站已开启CDN缓存，使用 [Ctrl + F5] 可查看本站最新动态】
+          &nbsp | &nbsp本站已开启CDN缓存，[Ctrl + F5] 可查看最新动态&nbsp | &nbsp
         </span>
-        <div id="LA-DATA-WIDGET-container"></div>
+        <span v-if="visitorData" class="hidden">
+          <!-- 索引1：最近访客数，索引3：今日访客数，索引5：今日访问量，索引7：昨日访客数，索引9：昨日访问量，索引11：本月访问量，索引13：总访问量 -->
+          今日访问量 {{ visitorData[5] }}&nbsp | &nbsp总访问量 {{ visitorData[13] }}&nbsp | &nbsp本站已持续运行 {{ runningDays }} 天
+        </span>
       </div>
       <div v-else class="lrc">
         <Transition name="fade" mode="out-in">
@@ -52,8 +59,9 @@ const store = mainStore();
 const fullYear = new Date().getFullYear();
 
 // 加载配置数据
-const siteStartDate = ref(import.meta.env.VITE_SITE_START);
+const siteStartDate = ref(new Date(import.meta.env.VITE_SITE_START));
 const siteIcp = ref(import.meta.env.VITE_SITE_ICP);
+const siteGONGAN = ref(import.meta.env.VITE_SITE_GONGAN);
 const siteAnthor = ref(import.meta.env.VITE_SITE_ANTHOR);
 const siteUrl = computed(() => {
   const url = import.meta.env.VITE_SITE_URL;
@@ -65,16 +73,31 @@ const siteUrl = computed(() => {
   return url;
 });
 
-// 在组件挂载后，将统计脚本添加到页面上
+// 访客数据
+const visitorData = ref([]);
+// 获取访客数据的方法
+const getVisitorData = async () => {
+  try {
+    const response = await fetch("https://v6-widget.51.la/v6/3HjGAq3ibCpbwWfo/quote.js");
+    const data = await response.text();
+    const num = data.match(/<span>.*?<\/span>/g);
+    const parsedData = num.map(el => el.replace(/<\/?span>/g, ""));
+    visitorData.value = parsedData;
+  } catch (error) {
+    console.error("Error fetching visitor data:", error);
+  }
+};
+// 在组件挂载时获取访客数据
 onMounted(() => {
-  // 创建脚本元素
-  const script = document.createElement('script');
-  script.id = "LA-DATA-WIDGET";
-  script.src = "https://v6-widget.51.la/v6/3HjGAq3ibCpbwWfo/quote.js?theme=0&f=12&display=0,1,1,1,1,1,1,1";
-  script.crossorigin = "anonymous";
-  script.charset = "UTF-8";
-  // 挂载脚本
-  document.getElementById('LA-DATA-WIDGET-container').appendChild(script);
+  getVisitorData();
+});
+
+// 计算运行天数
+const runningDays = computed(() => {
+  const oneDay = 24 * 60 * 60 * 1000; // hours*minutes*seconds*milliseconds
+  const today = new Date();
+  const diffDays = Math.round(Math.abs((today - siteStartDate.value) / oneDay));
+  return diffDays;
 });
 
 </script>
@@ -118,7 +141,7 @@ onMounted(() => {
   &.blur {
     backdrop-filter: blur(10px);
     background: rgb(0 0 0 / 25%);
-    font-size: 16px;
+    font-size: 14px;
   }
   .fade-enter-active,
   .fade-leave-active {
