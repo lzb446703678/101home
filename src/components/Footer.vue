@@ -33,7 +33,7 @@
         </span>
         <span v-if="visitorData" class="hidden">
           <!-- 索引1：最近访客数，索引3：今日访客数，索引5：今日访问量，索引7：昨日访客数，索引9：昨日访问量，索引11：本月访问量，索引13：总访问量 -->
-          今日访问量 {{ visitorData[5] }}&nbsp | &nbsp总访问量 {{ visitorData[13] }}&nbsp | &nbsp本站已持续运行 {{ runningDays }} 天
+          今日访问量 {{ visitorData[5] }}&nbsp | &nbsp总访问量 {{ visitorData[13] }}&nbsp | &nbsp已持续运行 {{ runningDays }} 天
         </span>
       </div>
       <div v-else class="lrc">

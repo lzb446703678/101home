@@ -32,7 +32,29 @@ onMounted(() => {
     emoji: [
       'https://unpkg.com/@waline/emojis@1.0.1/weibo',
       'https://unpkg.com/@waline/emojis@1.0.1/alus',
+      'https://unpkg.com/@waline/emojis@1.2.0/bilibili',
+      'https://unpkg.com/@waline/emojis@1.2.0/bmoji',
+      'https://unpkg.com/@waline/emojis@1.2.0/qq',
+      'https://unpkg.com/@waline/emojis@1.2.0/tieba',
+      'https://unpkg.com/@waline/emojis@1.2.0/tw-emoji',
     ],
+    reaction: [
+    'https://img.101jc.com/img/sun_with_face_3d.png!yuantu',
+    'https://img.101jc.com/img/smiling_face_with_smiling_eyes_3d.png!yuantu',
+    'https://img.101jc.com/img/yawning_face_3d.png!yuantu',
+    'https://img.101jc.com/img/pensive_face_3d.png!yuantu',
+    'https://img.101jc.com/img/confounded_face_3d.png!yuantu',
+  ],
+  locale: {
+    reactionTitle: "请不吝留下您对本站的评价",
+    reaction0: "非常喜欢",
+    reaction1: "喜欢",
+    reaction2: "一般",
+    reaction3: "不喜欢",
+    reaction4: "非常不喜欢",
+    placeholder: "期待你的留言！",
+    sofa: '来发评论吧~',
+  },
   });
 });
 </script>
