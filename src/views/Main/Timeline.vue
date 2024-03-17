@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       events: [
+      { date: '2024-03-17', description: '添加了评论组件的评价功能，优化了评论样式' },
       { date: '2024-03-16', description: '优化了桌面端和移动端的页脚组件布局及样式，添加了访问量及运行天数统计' },
       { date: '2024-03-15', description: '优化了评论组件的样式，开启了评论审核功能' },
       { date: '2024-03-14', description: '更新了首页日志的样式，点击链接可跳转到对应站点或文章' },
