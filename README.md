@@ -22,7 +22,7 @@
 
 ### 相比原项目主要修改的内容
 
-1. 添加了主页的更新日志功能
+1. 添加了主页的更新日志功能，此处主要使用了[homepage](https://github.com/ZYYO666/homepage)项目的部分相关代码，原作者是[ZYYO666](https://github.com/ZYYO666)
 
 ![日志](public/screenshots/rizhi.png)
 
