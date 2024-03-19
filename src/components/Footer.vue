@@ -78,7 +78,8 @@ const visitorData = ref([]);
 // 获取访客数据的方法
 const getVisitorData = async () => {
   try {
-    const response = await fetch("https://v6-widget.51.la/v6/3HjGAq3ibCpbwWfo/quote.js");
+    const timestamp = new Date().getTime();
+    const response = await fetch(`https://v6-widget.51.la/v6/3HjGAq3ibCpbwWfo/quote.js?_=${timestamp}`);
     const data = await response.text();
     const num = data.match(/<span>.*?<\/span>/g);
     const parsedData = num.map(el => el.replace(/<\/?span>/g, ""));
@@ -87,6 +88,7 @@ const getVisitorData = async () => {
     console.error("Error fetching visitor data:", error);
   }
 };
+
 // 在组件挂载时获取访客数据
 onMounted(() => {
   getVisitorData();
