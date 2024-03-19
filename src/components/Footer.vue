@@ -21,27 +21,20 @@
         </span> -->
         <!-- 站点备案 -->
         <a v-if="siteIcp" href="https://beian.miit.gov.cn" target="_blank">
-          &nbsp;| &nbsp;
+          &nbsp; &nbsp;
           <img src="https://img.101jc.com/img/icp.png!yuantu" alt="ICP图标" style="width:14px;height:14px;padding-top: 2px;">
           {{ siteIcp }}
         </a>
 
         <a v-if="siteGONGAN" href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank">
-          &nbsp;| &nbsp;
+          &nbsp; &nbsp;
           <img src="https://img.101jc.com/img/gongan.png!yuantu" alt="公安图标" style="width:14px;height:14px;padding-top: 2px;">
           {{ siteGONGAN }}
         </a>
         <span v-if="visitorData" class="hidden">
           <!-- 索引1：最近访客数，索引3：今日访客数，索引5：今日访问量，索引7：昨日访客数，索引9：昨日访问量，索引11：本月访问量，索引13：总访问量 -->
-          &nbsp | &nbsp今日访问量 {{ visitorData[5] }}&nbsp | &nbsp总访问量 {{ visitorData[13] }}&nbsp | &nbsp已持续运行 {{ runningDays }} 天&nbsp | &nbsp
+          &nbsp | &nbsp当前访客 {{ visitorData[1] }}&nbsp | &nbsp今日访问量 {{ visitorData[5] }}&nbsp | &nbsp总访问量 {{ visitorData[13] }}&nbsp | &nbsp已持续运行 {{ runningDays }} 天&nbsp | &nbsp
         </span>
-        <Transition name="slide">
-
-          <span :key="currentTextIndex" class="slide-text">
-            {{ getCurrentText }}
-          </span>
-
-      </Transition>
       </div>
       <div v-else class="lrc">
         <Transition name="fade" mode="out-in">
@@ -108,62 +101,6 @@ const runningDays = computed(() => {
   const diffDays = Math.round(Math.abs((today - siteStartDate.value) / oneDay));
   return diffDays;
 });
-
-// 轮播文本内容
-const texts = [
-  "本站已开启CDN缓存，[Ctrl + F5] 可查看最新动态",
-  // "点击鼠标右键可以打开或关闭留言板",
-  // "有任何问题或建议，请留言告诉我"
-];
-// 当前显示的文本索引
-const currentTextIndex = ref(0);
-// 计算属性，用于获取当前应显示的文本
-const getCurrentText = computed(() => {
-  return texts[currentTextIndex.value % texts.length];
-});
-// 设置轮播定时器
-let intervalId = null;
-onMounted(() => {
-  intervalId = setInterval(() => {
-    currentTextIndex.value = (currentTextIndex.value + 1) % texts.length;
-  }, 5000); // 每5秒切换一次
-});
-onUnmounted(() => {
-  clearInterval(intervalId);
-});
-// 动画钩子函数
-const beforeEnter = (el) => {
-  el.style.opacity = 0;
-  el.style.transform = 'translateY(20px)';
-};
-const enter = (el, done) => {
-  el.style.opacity = 0;
-  el.style.transform = 'translateY(20px)';
-  Vue.nextTick(() => {
-    setTimeout(() => {
-      el.style.opacity = 1;
-      el.style.transform = 'translateY(0)';
-      done();
-    }, 500); // 在旧文本完全消失后延迟50ms
-  });
-};
-
-const beforeLeave = (el) => {
-  el.style.opacity = 1;
-  el.style.transform = 'translateY(0)';
-};
-const leave = (el, done) => {
-  el.style.opacity = 1;
-  el.style.transform = 'translateY(0)';
-  Vue.nextTick(() => {
-    setTimeout(() => {
-      el.style.opacity = 0;
-      el.style.transform = 'translateY(-20px)';
-      done();
-    }, 0); // 在旧文本完全消失后延迟50ms
-  });
-};
-
 </script>
 
 <style lang="scss" scoped>
@@ -222,24 +159,5 @@ const leave = (el, done) => {
       display: none;
     }
   }
-}
-
-/* 添加滑动过渡效果 */
-.slide-enter-active,
-.slide-leave-active {
-  transition: all 0.5s ease;
-}
-.slide-text {
-    width: 200px;
-    white-space: nowrap; /* Prevent text wrapping */
-    overflow: hidden; /* Hide overflowing text */
-  }
-.slide-enter-from {
-  transform: translateY(20px);
-  opacity: 0;
-}
-.slide-leave-to {
-  transform: translateY(-20px);
-  opacity: 0;
 }
 </style>

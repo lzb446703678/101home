@@ -9,6 +9,12 @@
         <span class="sm">.{{ siteUrl[1] }}</span>
       </div>
     </div>
+              <!-- 轮播文本 -->
+              <div class="hidden">
+      <div class="lunbo-container">
+        <Lunbo />
+      </div>
+    </div>
     <!-- 简介 -->
     <div class="description cards" @click="changeBox">
       <div class="content">
@@ -32,6 +38,7 @@ import { Icon } from "@vicons/utils";
 import { QuoteLeft, QuoteRight } from "@vicons/fa";
 import { Error } from "@icon-park/vue-next";
 import { mainStore } from "@/store";
+import Lunbo from "@/components/Lunbo.vue";
 const store = mainStore();
 
 // 主页站点logo
@@ -187,4 +194,13 @@ watch(
     }
   }
 }
+.lunbo-container {
+    position: absolute;
+    bottom: 250px; /* 调整距离底部的距离 */
+    left: 50%;
+    transform: translateX(-50%); /* 水平居中 */
+    width: 80%; /* 调整宽度 */
+    max-width: 800px; /* 设置最大宽度 */
+    text-align: center; /* 文本居中 */
+  }
 </style>
