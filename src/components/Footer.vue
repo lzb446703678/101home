@@ -22,13 +22,13 @@
         <!-- 站点备案 -->
         <a v-if="siteIcp" href="https://beian.miit.gov.cn" target="_blank">
           &nbsp; &nbsp;
-          <img src="https://img.101jc.com/img/icp.png!yuantu" alt="ICP图标" style="width:14px;height:14px;padding-top: 2px;">
+          <img src="https://img.101jc.com/img/icp.png!yuantu" alt="ICP图标" style="width:14px;height:14px;padding-top: 0px;">
           {{ siteIcp }}
         </a>
 
         <a v-if="siteGONGAN" href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank">
           &nbsp; &nbsp;
-          <img src="https://img.101jc.com/img/gongan.png!yuantu" alt="公安图标" style="width:14px;height:14px;padding-top: 2px;">
+          <img src="https://img.101jc.com/img/gongan.png!yuantu" alt="公安图标" style="width:14px;height:14px;padding-top: 0px;">
           {{ siteGONGAN }}
         </a>
         <span v-if="visitorData" class="hidden">

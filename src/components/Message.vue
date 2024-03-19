@@ -203,4 +203,9 @@ watch(
     max-width: 800px; /* 设置最大宽度 */
     text-align: center; /* 文本居中 */
   }
+  @media (max-width: 768px) {
+    .hidden {
+      display: none;
+    }
+  }
 </style>
