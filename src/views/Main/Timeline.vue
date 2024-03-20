@@ -16,6 +16,7 @@ export default {
   data() {
     return {
       events: [
+      { date: '2024-03-20', description: '发布新文章<br>[学习记录：保温锚栓拉拔试验](https://blog.101jc.com/archives/1710934798662)' },
       { date: '2024-03-19', description: '修复了无法正常显示访问量的Bug，添加了轮播文本' },
       { date: '2024-03-18', description: '1. 发布新文章<br>[学习记录：拉结筋、构造柱植筋拉拔试验](https://blog.101jc.com/archives/1710767324859)<br>2. 发布新文章<br>[学习记录：碳纤维布加固正拉粘结强度测试.](https://blog.101jc.com/archives/1710771385186)' },
       { date: '2024-03-17', description: '1. 添加了评论组件的评价功能，优化了评论样式<br>2. 发布新文章<br>[精读《公路桥梁荷载试验规程》：#02 桥梁索力测试](https://blog.101jc.com/archives/1710664500878)<br>3. 发布新文章<br>[学习记录：塑料管材性能试验方法](https://blog.101jc.com/archives/1710675384029)' },
