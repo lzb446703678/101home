@@ -12,10 +12,13 @@
             <MainLeft />
             <MainRight v-show="!store.boxOpenState" />
             <Box v-show="store.boxOpenState" />
-          </div>
-          <div class="timeline-container" v-show="!store.boxOpenState">
+            <!-- <div class="timeline-container">
+            <div class="cards" v-show="!store.boxOpenState" style="margin-left: 80px;">
             <Timeline />
           </div>
+        </div> -->
+          </div>
+
         </section>
         <section class="more" v-show="store.setOpenState" @click="store.setOpenState = false">
           <MoreSet />
@@ -181,6 +184,7 @@ onBeforeUnmount(() => {
     }
     .timeline-container {
       width: 100%;
+      height: 100%;
       display: flex;
       justify-content: center;
       align-items: center;

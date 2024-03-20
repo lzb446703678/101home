@@ -9,12 +9,6 @@
         <span class="sm">.{{ siteUrl[1] }}</span>
       </div>
     </div>
-              <!-- 轮播文本 -->
-              <div class="hidden">
-      <div class="lunbo-container">
-        <Lunbo />
-      </div>
-    </div>
     <!-- 简介 -->
     <div class="description cards" @click="changeBox">
       <div class="content">
@@ -23,7 +17,9 @@
         </Icon>
         <div class="text">
           <p>{{ descriptionText.hello }}</p>
-          <p>{{ descriptionText.text }}</p>
+          <div class="lunbo-container">
+        <Lunbo />
+      </div>
         </div>
         <Icon size="16">
           <QuoteRight />
@@ -141,9 +137,10 @@ watch(
 
   .description {
     padding: 1rem;
-    margin-top: 3.5rem;
+    margin-top: 0.5rem;
     max-width: 460px;
     animation: fade 0.5s;
+    height: 165px;
 
     .content {
       display: flex;
@@ -167,6 +164,7 @@ watch(
     }
     @media (max-width: 720px) {
       max-width: 100%;
+      height: 150px;
       pointer-events: none;
     }
   }
@@ -196,10 +194,10 @@ watch(
 }
 .lunbo-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: left;
+  align-items: left;
   margin-top: 10px; /* 调整与 logo 的距离 */
-  text-align: center; /* 文本居中 */
+  text-align: left; /* 文本居中 */
     
   }
   @media (max-width: 768px) {

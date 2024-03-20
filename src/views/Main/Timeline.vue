@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       events: [
-      { date: '2024-03-20', description: '发布新文章<br>[学习记录：保温锚栓拉拔试验](https://blog.101jc.com/archives/1710934798662)' },
+      { date: '2024-03-20', description: '1. 发布新文章<br>[学习记录：保温锚栓拉拔试验](https://blog.101jc.com/archives/1710934798662)<br>2. 添加了打字机动画<br>3. 更新了主页布局' },
       { date: '2024-03-19', description: '修复了无法正常显示访问量的Bug，添加了轮播文本' },
       { date: '2024-03-18', description: '1. 发布新文章<br>[学习记录：拉结筋、构造柱植筋拉拔试验](https://blog.101jc.com/archives/1710767324859)<br>2. 发布新文章<br>[学习记录：碳纤维布加固正拉粘结强度测试.](https://blog.101jc.com/archives/1710771385186)' },
       { date: '2024-03-17', description: '1. 添加了评论组件的评价功能，优化了评论样式<br>2. 发布新文章<br>[精读《公路桥梁荷载试验规程》：#02 桥梁索力测试](https://blog.101jc.com/archives/1710664500878)<br>3. 发布新文章<br>[学习记录：塑料管材性能试验方法](https://blog.101jc.com/archives/1710675384029)' },
@@ -71,16 +71,17 @@ export default {
   width: 100%;
   height: 100%;
   border-radius: 13px;
-  margin-top: 15px;
-  padding: 20px;
+  margin-top: 20px;
+  padding: 0px;
   backdrop-filter: 0px;
 
 }
 #line {
-    width: 300px;
-    height: 500px;
+    width: 100%;
+    height: 220px;
     font-size: 13px;
-    padding-left: 100px;
+    padding-left: 20px;
+    margin-left: 0px;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     /* 隐藏滚动条，但仍然允许滚动 */
@@ -89,6 +90,11 @@ export default {
     overflow: -moz-scrollbars-none; /* 旧的Mozilla浏览器 */
 }
 
+@media (max-width: 768px) {
+    #line {
+        height: 140px; /* 移动端高度调整为120px */
+    }
+}
 #line::-webkit-scrollbar {
     display: none; /* 对于基于Webkit的浏览器，如Chrome、Safari等 */
 }
