@@ -14,6 +14,7 @@
           "「 本站已开启CDN缓存，[Ctrl + F5] 可查看最新动态 」",
           "「 点击鼠标右键可以打开或关闭留言板 」",
           "「 有任何问题或建议，请留言告诉我 」",
+          "「 知识库目前初步搭建了框架，尚未更新具体内容，后续会从博客中择优整理录入 」",
         ],
         currentIndex: 0,
         showText: true,
@@ -34,7 +35,7 @@
             this.currentIndex = (this.currentIndex + 1) % this.texts.length;
             this.showText = true;
           }, 200);
-        }, 5000);
+        }, 6000);
       },
     },
   };
@@ -42,7 +43,7 @@
   
   <style>
   .text-carousel {
-    width: 100%;
+    width: 70%;
     overflow: hidden;
   }
   
@@ -50,7 +51,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20px;
+    height: 50px;
     font-size: 14px;
     color: #333;
   }

@@ -22,18 +22,23 @@
         <!-- 站点备案 -->
         <a v-if="siteIcp" href="https://beian.miit.gov.cn" target="_blank">
           &nbsp; &nbsp;
-          <img src="https://img.101jc.com/img/icp.png!yuantu" alt="ICP图标" style="width:14px;height:14px;padding-top: 0px;">
+          <img src="https://img.101jc.com/img/icp.png!yuantu" alt="ICP图标" style="width:14px;height:14px;">
           {{ siteIcp }}
         </a>
 
         <a v-if="siteGONGAN" href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank">
           &nbsp; &nbsp;
-          <img src="https://img.101jc.com/img/gongan.png!yuantu" alt="公安图标" style="width:14px;height:14px;padding-top: 0px;">
+          <img src="https://img.101jc.com/img/gongan.png!yuantu" alt="公安图标" style="width:14px;height:14px;">
           {{ siteGONGAN }}
+        </a>
+        <a href="https://cloud.tencent.com/" target="_blank">
+          &nbsp; &nbsp;由
+          <img src="https://img.101jc.com/img/tengxunyun.png!yuantu" alt="腾讯云图标" style="width:19px;height:14px;">
+          腾讯云 提供CDN加速/云存储服务
         </a>
         <span v-if="visitorData" class="hidden">
           <!-- 索引1：最近访客数，索引3：今日访客数，索引5：今日访问量，索引7：昨日访客数，索引9：昨日访问量，索引11：本月访问量，索引13：总访问量 -->
-          &nbsp | &nbsp当前访客 {{ visitorData[1] }}&nbsp | &nbsp今日访问量 {{ visitorData[5] }}&nbsp | &nbsp总访问量 {{ visitorData[13] }}&nbsp | &nbsp已持续运行 {{ runningDays }} 天&nbsp | &nbsp
+          &nbsp | &nbsp今日访问量 {{ visitorData[5] }}&nbsp | &nbsp总访问量 {{ visitorData[13] }}&nbsp | &nbsp已持续运行 {{ runningDays }} 天&nbsp | &nbsp
         </span>
       </div>
       <div v-else class="lrc">

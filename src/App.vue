@@ -30,12 +30,6 @@
       >
         <component :is="store.mobileOpenState ? CloseSmall : HamburgerButton" />
       </Icon>
-      <!-- 轮播文本 -->
-      <div class="hidden">
-      <div class="lunbo-container">
-        <Lunbo />
-      </div>
-    </div>
       <!-- 页脚 -->
       <Transition name="fade" mode="out-in">
         <Footer v-show="!store.backgroundShow && !store.setOpenState" />
@@ -57,7 +51,6 @@ import MainRight from "@/views/Main/Right.vue";
 import Timeline from "@/views/Main/Timeline.vue";
 import Background from "@/components/Background.vue";
 import Footer from "@/components/Footer.vue";
-import Lunbo from "@/components/Lunbo.vue";
 import Box from "@/views/Box/index.vue";
 import MoreSet from "@/views/MoreSet/index.vue";
 import cursorInit from "@/utils/cursor.js";

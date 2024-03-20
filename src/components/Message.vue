@@ -195,13 +195,12 @@ watch(
   }
 }
 .lunbo-container {
-    position: absolute;
-    bottom: 250px; /* 调整距离底部的距离 */
-    left: 50%;
-    transform: translateX(-50%); /* 水平居中 */
-    width: 80%; /* 调整宽度 */
-    max-width: 800px; /* 设置最大宽度 */
-    text-align: center; /* 文本居中 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px; /* 调整与 logo 的距离 */
+  text-align: center; /* 文本居中 */
+    
   }
   @media (max-width: 768px) {
     .hidden {
