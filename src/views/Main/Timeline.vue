@@ -2,7 +2,8 @@
   <div class="left-div">
     <ul id="line">
       <li v-for="(event, index) in events" :key="index">
-        <div class="focus"></div>
+        <div v-if="index === 0" class="first-focus"></div>
+        <div v-else class="focus"></div>
         <div :class="{'first-event-date': index === 0, 'event-date': index !== 0}">{{ event.date }}</div>
         <div :class="{'first-event-description': index === 0, 'event-description': index !== 0}" v-html="getDescriptionHtml(event.description)"></div>
       </li>
@@ -16,6 +17,7 @@ export default {
   data() {
     return {
       events: [
+      { date: '2024-03-21', description: '调整了首页日志的样式' },
       { date: '2024-03-20', description: '1. 发布新文章<br>[学习记录：保温锚栓拉拔试验](https://blog.101jc.com/archives/1710934798662)<br>2. 添加了打字机动画<br>3. 更新了主页布局' },
       { date: '2024-03-19', description: '修复了无法正常显示访问量的Bug，添加了轮播文本' },
       { date: '2024-03-18', description: '1. 发布新文章<br>[学习记录：拉结筋、构造柱植筋拉拔试验](https://blog.101jc.com/archives/1710767324859)<br>2. 发布新文章<br>[学习记录：碳纤维布加固正拉粘结强度测试.](https://blog.101jc.com/archives/1710771385186)' },
@@ -71,7 +73,6 @@ export default {
   width: 100%;
   height: 100%;
   border-radius: 13px;
-  margin-top: 20px;
   padding: 0px;
   backdrop-filter: 0px;
 
@@ -80,8 +81,6 @@ export default {
     width: 100%;
     height: 220px;
     font-size: 13px;
-    padding-left: 20px;
-    margin-left: 0px;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     /* 隐藏滚动条，但仍然允许滚动 */
@@ -130,15 +129,23 @@ export default {
   50% { background-color: #00FDA1; }
   100% { background-color: #aaffcd; }
 }
-.focus {
-    width: 15px;
-    height: 15px;
-    border-radius: 22px;
+.first-focus {
+    width: 17px;
+    height: 2px;
     background-color: rgb(255 255 255);
-    border: 2px solid #fff;
     position: absolute;
     left: -9px;
-    top: 50%;
+    top: 23px;
+    
+}
+
+.focus {
+    width: 15px;
+    height: 2px;
+    background-color: #bbbbbb;
+    position: absolute;
+    left: -9px;
+    top: 23px;
     
 }
 

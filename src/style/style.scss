@@ -67,6 +67,7 @@ p {
   transition:
     backdrop-filter 0.3s,
     transform 0.3s;
+  overflow: hidden; /* 确保内部元素不超出边界 */
   &:hover {
     transform: scale(1.01);
   }
