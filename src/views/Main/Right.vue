@@ -5,6 +5,8 @@
       <span class="bg">{{ siteUrl[0] }}</span>
       <span class="sm">.{{ siteUrl[1] }}</span>
     </div>
+    <!-- 添加图片 -->
+    <!-- <img class="promo-image" src="https://img.101jc.com/img/gongzhonghao.png!yuantu80" alt="Promotion"> -->
     <!-- 功能区 -->
     <Func />
     <!-- 网站链接 -->
@@ -36,6 +38,7 @@ const siteUrl = computed(() => {
   // flex: 1 0 0%;
   width: 50%;
   margin-left: 20px;
+  // transform: translateY(-70px);
   .logo {
     width: 100%;
     font-family: "Pacifico-Regular";
@@ -52,6 +55,12 @@ const siteUrl = computed(() => {
     @media (min-width: 720px) {
       display: none;
     }
+  }
+  .promo-image {
+    width: 290px; // 设置图片高度
+    display: block; // 使图片可应用margin属性
+    margin-left: auto; // 右对齐
+    margin-bottom: 40px; // 与下方组件的间距
   }
   @media (max-width: 720px) {
     margin-left: 0;

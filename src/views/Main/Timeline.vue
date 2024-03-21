@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       events: [
+      { date: '2024-03-22', description: '1. 创建了公众号“101检测”<br>2. 在首页添加了公众号二维码' },
       { date: '2024-03-21', description: '调整了首页日志的样式' },
       { date: '2024-03-20', description: '1. 发布新文章<br>[学习记录：保温锚栓拉拔试验](https://blog.101jc.com/archives/1710934798662)<br>2. 添加了打字机动画<br>3. 更新了主页布局' },
       { date: '2024-03-19', description: '修复了无法正常显示访问量的Bug，添加了轮播文本' },
@@ -70,7 +71,7 @@ export default {
 <style scoped>
 .left-div {
   flex-shrink: 0;
-  width: 100%;
+  width: 55%;
   height: 100%;
   border-radius: 13px;
   padding: 0px;
