@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       events: [
+      { date: '2024-03-23', description: '搭建了101储物间' },
       { date: '2024-03-22', description: '1. 创建了公众号“101检测”<br>2. 在首页添加了公众号二维码' },
       { date: '2024-03-21', description: '调整了首页日志的样式' },
       { date: '2024-03-20', description: '1. 发布新文章<br>[学习记录：保温锚栓拉拔试验](https://blog.101jc.com/archives/1710934798662)<br>2. 添加了打字机动画<br>3. 更新了主页布局' },
