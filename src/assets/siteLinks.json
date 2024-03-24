@@ -25,6 +25,11 @@
     "link": "https://blog.101jc.com/"
   },
   {
+    "icon": "Fire",
+    "name": "今日热点",
+    "link": "https://hot.101jc.com/"
+  },
+  {
     "icon": "UserCircle",
     "name": "关于我",
     "link": "https://blog.101jc.com/about"
