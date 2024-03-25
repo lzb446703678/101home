@@ -10,13 +10,13 @@
             -
           </span>
           {{ fullYear }}
-          <a :href="siteUrl">{{ siteAnthor }}</a>
+          <a :href="siteUrl" style="color:#38BDF8">{{ siteAnthor }}</a>
         </span>
         <span class="hidden">
           &nbsp;&nbsp; 基于
-        <a href="https://github.com/imsyy" target="_blank">imsyy</a>
+        <a href="https://github.com/imsyy" target="_blank" style="color:#38BDF8">imsyy</a>
         的开源项目并遵循
-        <a href="https://opensource.org/licenses/MIT" target="_blank">MIT许可协议</a>
+        <a href="https://opensource.org/licenses/MIT" target="_blank" style="color:#38BDF8">MIT许可协议</a>
       </span>
         <!-- 以下信息请不要修改哦 -->
         <!-- <span class="hidden">
