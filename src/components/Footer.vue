@@ -44,8 +44,9 @@
         </a>
         <span v-if="visitorData" class="hidden">
           <!-- 索引1：最近访客数，索引3：今日访客数，索引5：今日访问量，索引7：昨日访客数，索引9：昨日访问量，索引11：本月访问量，索引13：总访问量 -->
-          &nbsp | &nbsp今日访问量 {{ visitorData[5] }}&nbsp | &nbsp总访问量 {{ visitorData[13] }}&nbsp | &nbsp已持续运行 {{ runningDays }} 天&nbsp | &nbsp
+          &nbsp | &nbsp今日访问量 <span style="color:#38BDF8;">{{ visitorData[5] }}</span>&nbsp | &nbsp总访问量 <span style="color:#38BDF8">{{ visitorData[13] }}</span>&nbsp | &nbsp已持续运行 <span style="color:#38BDF8">{{ runningDays }}</span> 天&nbsp | &nbsp
         </span>
+
       </div>
       <div v-else class="lrc">
         <Transition name="fade" mode="out-in">
