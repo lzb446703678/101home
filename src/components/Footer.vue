@@ -12,6 +12,12 @@
           {{ fullYear }}
           <a :href="siteUrl">{{ siteAnthor }}</a>
         </span>
+        <span class="hidden">
+          &nbsp;&nbsp; 基于
+        <a href="https://github.com/imsyy" target="_blank">imsyy</a>
+        的开源项目并遵循
+        <a href="https://opensource.org/licenses/MIT" target="_blank">MIT许可协议</a>
+      </span>
         <!-- 以下信息请不要修改哦 -->
         <!-- <span class="hidden">
           &amp;&nbsp;Made&nbsp;by
@@ -21,13 +27,13 @@
         </span> -->
         <!-- 站点备案 -->
         <a v-if="siteIcp" href="https://beian.miit.gov.cn" target="_blank">
-          &nbsp; &nbsp;
+          &nbsp; 
           <img src="https://img.101jc.com/img/icp.png!yuantu" alt="ICP图标" style="width:14px;height:14px;">
           {{ siteIcp }}
         </a>
 
         <a v-if="siteGONGAN" href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank" class="hidden">
-          &nbsp; &nbsp;
+          &nbsp;&nbsp;
           <img src="https://img.101jc.com/img/gongan.png!yuantu" alt="公安图标" style="width:14px;height:14px;">
           {{ siteGONGAN }}
         </a>
