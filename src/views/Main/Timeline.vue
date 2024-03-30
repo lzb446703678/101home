@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       events: [
+      { date: '2024-03-30', description: '搭建了[检测速查手册](https://memo.101jc.com/)' },
       { date: '2024-03-24', description: '搭建了[今日热点](https://hot.101jc.com/)' },
       { date: '2024-03-23', description: '搭建了[101储物间](https://pan.101jc.com/)' },
       { date: '2024-03-22', description: '1. 创建了公众号“101检测”<br>2. 在首页添加了公众号二维码' },
