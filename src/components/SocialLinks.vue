@@ -13,17 +13,17 @@
         <img class="icon" :src="item.icon" height="24" />
       </a>
       <a  href="javascript:void(0)" @click="showWechatImage" @mouseenter="socialTip = '微信'">
-        <img class="icon" src="https://img.101jc.com/img/wechaticon2.png!yuantu" height="24" />
+        <img class="icon" src="https://img.101jc.com/img/wechaticon2.png" height="24" />
         <div class="iconTip"></div>
       </a>
       <a href="javascript:void(0)" @click="toggleMessageBox" @mouseenter="socialTip = '留言'">
-      <img class="icon-ly" src="https://img.101jc.com/img/liuyan.png!yuantu" height="24" />
+      <img class="icon-ly" src="https://img.101jc.com/img/liuyan.png" height="24" />
       <div class="iconTip"></div>
     </a>
     </div>
     <span class="tip" v-show="!isWechatImageVisible">{{ socialTip }}</span>
     <div v-show="isWechatImageVisible" class="wechat-popup" @click.stop>
-      <img src="https://img.101jc.com/img/wechat.jpg!yuantu" height="271" width="200" @click.stop />
+      <img src="https://img.101jc.com/img/wechat.jpg" height="271" width="200" @click.stop />
     </div>
   </div>
 </template>

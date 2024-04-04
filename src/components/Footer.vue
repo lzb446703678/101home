@@ -28,18 +28,18 @@
         <!-- 站点备案 -->
         <a v-if="siteIcp" href="https://beian.miit.gov.cn" target="_blank">
           &nbsp; 
-          <img src="https://img.101jc.com/img/icp.png!yuantu" alt="ICP图标" style="width:14px;height:14px;">
+          <img src="https://img.101jc.com/img/icp.png" alt="ICP图标" style="width:14px;height:14px;">
           {{ siteIcp }}
         </a>
 
         <a v-if="siteGONGAN" href="https://beian.mps.gov.cn/#/query/webSearch" target="_blank" class="hidden">
           &nbsp;&nbsp;
-          <img src="https://img.101jc.com/img/gongan.png!yuantu" alt="公安图标" style="width:14px;height:14px;">
+          <img src="https://img.101jc.com/img/gongan.png" alt="公安图标" style="width:14px;height:14px;">
           {{ siteGONGAN }}
         </a>
         <a href="https://cloud.tencent.com/" target="_blank" class="hidden">
           &nbsp; &nbsp;由
-          <img src="https://img.101jc.com/img/tengxunyun.png!yuantu" alt="腾讯云图标" style="width:19px;height:14px;">
+          <img src="https://img.101jc.com/img/tengxunyun.png" alt="腾讯云图标" style="width:19px;height:14px;">
           腾讯云 提供CDN加速/云存储服务
         </a>
         <span v-if="visitorData" class="hidden">

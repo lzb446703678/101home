@@ -54,7 +54,7 @@ const isVideo = computed(() => bgUrl.value && bgUrl.value.toLowerCase().endsWith
 // 更换壁纸链接
 const changeBg = (type) => {
   if (type == 0) {
-    bgUrl.value = `https://img.101jc.com/img/background1.jpg!yuantu`;
+    bgUrl.value = `https://img.101jc.com/img/background1.jpg`;
   } else if (type == 1) {
     bgUrl.value = "https://api.dujin.org/bing/1920.php";
   } else if (type == 2) {
@@ -90,7 +90,7 @@ const imgAnimationEnd = () => {
 // 图片显示失败
 const imgLoadError = () => {
   console.error("壁纸加载失败：", bgUrl.value);
-  bgUrl.value = `https://img.101jc.com/img/background1.jpg!yuantu`;
+  bgUrl.value = `https://img.101jc.com/img/background1.jpg`;
 };
 
 onMounted(() => {

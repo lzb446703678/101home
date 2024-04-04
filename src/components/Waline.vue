@@ -39,11 +39,11 @@ onMounted(() => {
       'https://unpkg.com/@waline/emojis@1.2.0/tw-emoji',
     ],
     reaction: [
-    'https://img.101jc.com/img/sun_with_face_3d.png!yuantu',
-    'https://img.101jc.com/img/smiling_face_with_smiling_eyes_3d.png!yuantu',
-    'https://img.101jc.com/img/yawning_face_3d.png!yuantu',
-    'https://img.101jc.com/img/pensive_face_3d.png!yuantu',
-    'https://img.101jc.com/img/confounded_face_3d.png!yuantu',
+    'https://img.101jc.com/img/sun_with_face_3d.png',
+    'https://img.101jc.com/img/smiling_face_with_smiling_eyes_3d.png',
+    'https://img.101jc.com/img/yawning_face_3d.png',
+    'https://img.101jc.com/img/pensive_face_3d.png',
+    'https://img.101jc.com/img/confounded_face_3d.png',
   ],
   locale: {
     reactionTitle: "请不吝留下您对本站的评价",

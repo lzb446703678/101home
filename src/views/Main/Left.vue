@@ -10,7 +10,7 @@
     
     <div class="cards" style="max-width: 465px; display: flex;">
       <Timeline />
-      <img class="hidden" src="https://img.101jc.com/img/gongzhonghao6.png!yuantu" alt="GongZhongHao" style="height: 220px; margin-left:auto;">
+      <img class="hidden" src="https://img.101jc.com/img/gongzhonghao6.png" alt="GongZhongHao" style="height: 220px; margin-left:auto;">
     </div>
     <SocialLinks />
   </div>
