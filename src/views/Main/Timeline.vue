@@ -17,6 +17,7 @@ export default {
   data() {
     return {
       events: [
+      { date: '2024-04-05', description: '完成了全站图床的迁移' },
       { date: '2024-03-30', description: '搭建了[检测速查手册](https://memo.101jc.com/)' },
       { date: '2024-03-24', description: '搭建了[今日热点](https://hot.101jc.com/)' },
       { date: '2024-03-23', description: '搭建了[101储物间](https://pan.101jc.com/)' },

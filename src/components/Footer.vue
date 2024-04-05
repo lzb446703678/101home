@@ -13,10 +13,9 @@
           <a :href="siteUrl" style="color:#38BDF8">{{ siteAnthor }}</a>
         </span>
         <span class="hidden">
-          &nbsp;&nbsp; 基于
+          &nbsp;&nbsp; Based on
         <a href="https://github.com/imsyy" target="_blank" style="color:#38BDF8">imsyy</a>
-        的开源项目并遵循
-        <a href="https://opensource.org/licenses/MIT" target="_blank" style="color:#38BDF8">MIT许可协议</a>
+        's project
       </span>
         <!-- 以下信息请不要修改哦 -->
         <!-- <span class="hidden">
@@ -36,11 +35,6 @@
           &nbsp;&nbsp;
           <img src="https://img.101jc.com/img/gongan.png" alt="公安图标" style="width:14px;height:14px;">
           {{ siteGONGAN }}
-        </a>
-        <a href="https://cloud.tencent.com/" target="_blank" class="hidden">
-          &nbsp; &nbsp;由
-          <img src="https://img.101jc.com/img/tengxunyun.png" alt="腾讯云图标" style="width:19px;height:14px;">
-          腾讯云 提供CDN加速/云存储服务
         </a>
         <span v-if="visitorData" class="hidden">
           <!-- 索引1：最近访客数，索引3：今日访客数，索引5：今日访问量，索引7：昨日访客数，索引9：昨日访问量，索引11：本月访问量，索引13：总访问量 -->
