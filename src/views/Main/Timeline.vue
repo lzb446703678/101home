@@ -17,10 +17,10 @@ export default {
   data() {
     return {
       events: [
-      { date: '2024-04-05', description: '完成了全站图床的迁移' },
-      { date: '2024-03-30', description: '搭建了[检测速查手册](https://memo.101jc.com/)' },
+      { date: '2024-04-05', description: '弃用腾讯云COS并顺利完成了全站图床的迁移' },
+      { date: '2024-03-30', description: '搭建了[101速查手册](https://memo.101jc.com/)，将紧扣规范梳理各类检测知识点' },
       { date: '2024-03-24', description: '搭建了[今日热点](https://hot.101jc.com/)' },
-      { date: '2024-03-23', description: '搭建了[101储物间](https://pan.101jc.com/)' },
+      { date: '2024-03-23', description: '搭建了[101储物间](https://pan.101jc.com/)，将用于收集整理各类资源' },
       { date: '2024-03-22', description: '1. 创建了公众号“101检测”<br>2. 在首页添加了公众号二维码' },
       { date: '2024-03-21', description: '调整了首页日志的样式' },
       { date: '2024-03-20', description: '1. 发布新文章<br>[学习记录：保温锚栓拉拔试验](https://blog.101jc.com/archives/1710934798662)<br>2. 添加了打字机动画<br>3. 更新了主页布局' },
@@ -75,7 +75,7 @@ export default {
 <style scoped>
 .left-div {
   flex-shrink: 0;
-  width: 55%;
+  width: 90%;
   height: 100%;
   border-radius: 13px;
   padding: 0px;

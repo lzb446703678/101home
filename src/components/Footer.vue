@@ -13,9 +13,9 @@
           <a :href="siteUrl" style="color:#38BDF8">{{ siteAnthor }}</a>
         </span>
         <span class="hidden">
-          &nbsp;&nbsp; Based on
+          &nbsp;&nbsp; Based On
         <a href="https://github.com/imsyy" target="_blank" style="color:#38BDF8">imsyy</a>
-        's project
+        's Project
       </span>
         <!-- 以下信息请不要修改哦 -->
         <!-- <span class="hidden">
