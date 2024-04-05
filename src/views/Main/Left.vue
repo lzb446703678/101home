@@ -1,13 +1,14 @@
 <template>
   <div :class="store.mobileOpenState ? 'left hidden' : 'left'">
     <Message />
+    <div class="hidden">
     <div class="line">
       <Icon size="20">
         <Compass />
       </Icon>
       <span class="title">更新日志</span>
     </div>
-    <div class="hidden">
+    
     <div class="cards" style="max-width: 465px; display: flex;">
       <Timeline />
       <img class="hidden" src="https://img.101jc.com/img/gongzhonghao6.png" alt="GongZhongHao" style="height: 220px; margin-left:auto;">
