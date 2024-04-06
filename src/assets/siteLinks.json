@@ -24,26 +24,18 @@
     "name": "博客",
     "link": "https://blog.101jc.com/"
   },
-  {
-    "icon": "Fire",
-    "name": "今日热点",
-    "link": "https://hot.101jc.com/"
-  },
+
   {
     "icon": "PhotoVideo",
     "name": "时光相册",
     "link": "https://pic.101jc.com"
   },
   {
-    "icon": "UserCircle",
-    "name": "关于我",
-    "link": "https://blog.101jc.com/about"
+    "icon": "Fire",
+    "name": "今日热点",
+    "link": "https://hot.101jc.com/"
   },
-  {
-    "icon": "UserFriends",
-    "name": "友链",
-    "link": "https://blog.101jc.com/links"
-  },
+
   {
     "icon": "LaptopCode",
     "name": "站点监测",
@@ -53,6 +45,16 @@
     "icon": "Toolbox",
     "name": "工具箱",
     "link": "https://tool.101jc.com/"
+  },
+  {
+    "icon": "UserFriends",
+    "name": "友链",
+    "link": "https://blog.101jc.com/links"
+  },
+  {
+    "icon": "UserCircle",
+    "name": "关于我",
+    "link": "https://blog.101jc.com/about"
   },
   {
     "icon": "Compass",
