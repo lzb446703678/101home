@@ -76,6 +76,23 @@ p {
   }
 }
 
+.cards-timeline {
+  border-radius: 6px;
+  background-color: #00000040;
+  backdrop-filter: blur(10px);
+  transform: scale(1);
+  transition:
+    backdrop-filter 0.3s,
+    transform 0.3s;
+  overflow: hidden; /* 确保内部元素不超出边界 */
+  &:hover {
+    transform: scale(1.00);
+  }
+  &:active {
+    transform: scale(0.98);
+  }
+}
+
 // 文字超出
 .text-hidden {
   overflow: hidden;
