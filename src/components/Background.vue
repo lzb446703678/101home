@@ -54,7 +54,7 @@ const isVideo = computed(() => bgUrl.value && bgUrl.value.toLowerCase().endsWith
 // 更换壁纸链接
 const changeBg = (type) => {
   if (type == 0) {
-    bgUrl.value = `https://img.101jc.com/img/background1.jpg`;
+    bgUrl.value = `https://img.101jc.com/img/background16.png`;
   } else if (type == 1) {
     bgUrl.value = "https://api.dujin.org/bing/1920.php";
   } else if (type == 2) {
@@ -118,23 +118,38 @@ onBeforeUnmount(() => {
   }
 
   .bg {
-    position: absolute;
-    left: 0;
-    top: 0;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    backface-visibility: hidden;
-    filter: blur(20px) brightness(0.3);
-    transition:
-      filter 0.3s,
-      transform 0.3s;
-    animation: fade-blur-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-    animation-delay: 0.45s;
+    height: auto;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    position: fixed;
+    z-index: -999;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     &.video {
     // 如果需要对视频背景进行特殊样式处理，可以在这里添加
   }
   }
+  // .bg {
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   object-fit: cover;
+  //   backface-visibility: hidden;
+  //   filter: blur(20px) brightness(0.3);
+  //   transition:
+  //     filter 0.3s,
+  //     transform 0.3s;
+  //   animation: fade-blur-in 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  //   animation-delay: 0.45s;
+  //   &.video {
+  //   // 如果需要对视频背景进行特殊样式处理，可以在这里添加
+  // }
+  // }
   .gray {
     opacity: 1;
     position: absolute;

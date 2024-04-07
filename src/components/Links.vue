@@ -81,13 +81,16 @@ const siteIcon = {
 };
 
 // 链接跳转
+// 链接跳转
 const jumpLink = (data) => {
   if (data.name === "音乐" && store.musicClick) {
     if (typeof $openList === "function") $openList();
   } else {
-    window.open(data.link, "_blank");
+    // 使用window.location.href在当前页面打开链接
+    window.location.href = data.link;
   }
 };
+
 
 onMounted(() => {
   console.log(siteLinks);
