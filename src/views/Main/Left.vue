@@ -2,12 +2,10 @@
   <div :class="store.mobileOpenState ? 'left hidden' : 'left'">
     <Message />
     <div class="hidden">
-    <div class="line">
-      <Icon size="20">
-        <Compass />
-      </Icon>
-      <span class="title">更新日志</span>
-    </div>
+      <div class="line">
+  <img src="https://img.101jc.com/img/Compass-dark.svg" alt="Link Icon" style="width: 20px; height: 20px;">
+  <span class="title" style="color: #000000;">更新日志</span>
+</div>
     
     <div class="cards-timeline" style="max-width: 465px; display: flex;">
       <Timeline />

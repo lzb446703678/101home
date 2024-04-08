@@ -61,7 +61,7 @@ export default {
   getDescriptionHtml(description) {
     // 正则表达式匹配Markdown风格的链接
     const regex = /\[([^\]]+)\]\((https?:\/\/[^\s]+)\)/g;
-    let html = description.replace(regex, '<a href="$2" target="_blank" style="color: #DBE2EC;text-decoration: none; cursor: pointer !important;" class="custom-link" onmouseover="this.style.color=\'#00ffff\'; this.style.textDecoration=\'underline\'" onmouseout="this.style.color=\'#DBE2EC\'; this.style.textDecoration=\'none\'">$1</a>');
+    let html = description.replace(regex, '<a href="$2" target="_blank" style="color: #0086d1;text-decoration: none; cursor: pointer !important;" class="custom-link" onmouseover="this.style.color=\'#00ffff\'; this.style.textDecoration=\'underline\'" onmouseout="this.style.color=\'#0086d1\'; this.style.textDecoration=\'none\'">$1</a>');
     // 将<br>标签转换为换行
     html = html.replace(/<br>/g, '</br>');
     return html;
@@ -107,7 +107,7 @@ export default {
     list-style: none;
     position: relative;
     padding: 15px 0px 0px 15px;
-    border-left: 2px solid #000;
+    border-left: 2px solid #fff;
     border-radius: 0;
     scroll-snap-align: end;
     color: var(--main-text-color);
@@ -117,16 +117,16 @@ export default {
     animation: colorFlash 1s ease infinite;
 }
 .first-event-date {
-  color: #000; /* 第一个事件的日期颜色 */
+  color: #fff; /* 第一个事件的日期颜色 */
 }
 .event-date {
-  color: #444; /* 其他事件的日期颜色 */
+  color: #DDD; /* 其他事件的日期颜色 */
 }
 .first-event-description {
-  color: #000; /* 第一个事件的描述颜色 */
+  color: #fff; /* 第一个事件的描述颜色 */
 }
 .event-description {
-  color: #444; /* 其他事件的描述颜色 */
+  color: #DDD; /* 其他事件的描述颜色 */
 }
 
 @keyframes colorFlash {
@@ -137,7 +137,7 @@ export default {
 .first-focus {
     width: 17px;
     height: 2px;
-    background-color: #000000;
+    background-color: #fff;
     position: absolute;
     left: -9px;
     top: 23px;
@@ -147,7 +147,7 @@ export default {
 .focus {
     width: 15px;
     height: 2px;
-    background-color: #222222;
+    background-color: #FFF;
     position: absolute;
     left: -9px;
     top: 23px;

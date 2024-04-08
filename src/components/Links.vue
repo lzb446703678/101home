@@ -1,11 +1,10 @@
 <template>
   <div v-if="siteLinks[0]" class="links">
     <div class="line">
-      <Icon size="20">
-        <Link />
-      </Icon>
-      <span class="title">网站列表</span>
-    </div>
+  <img src="https://img.101jc.com/img/Link-dark.svg" alt="Link Icon" style="width: 20px; height: 20px;">
+  <span class="title" style="color: #000000;">网站列表</span>
+</div>
+
     <!-- 网站列表 -->
     <Swiper
       v-if="siteLinks[0]"
@@ -123,7 +122,7 @@ onMounted(() => {
       position: static;
       margin-top: 4px;
       :deep(.swiper-pagination-bullet) {
-        background-color: #fff;
+        background-color: #000;
         width: 18px;
         height: 4px;
         border-radius: 4px;
