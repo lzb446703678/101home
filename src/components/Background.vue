@@ -54,7 +54,7 @@ const isVideo = computed(() => bgUrl.value && bgUrl.value.toLowerCase().endsWith
 // 更换壁纸链接
 const changeBg = (type) => {
   if (type == 0) {
-    bgUrl.value = `https://img.101jc.com/img/background16.png`;
+    bgUrl.value = `https://img.101jc.com/img/background31.png`;
   } else if (type == 1) {
     bgUrl.value = "https://api.dujin.org/bing/1920.php";
   } else if (type == 2) {
@@ -104,34 +104,42 @@ onBeforeUnmount(() => {
 </script>
 
 <style lang="scss" scoped>
-.cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transition: 0.25s;
-  z-index: -1;
+.cover  {
+   position:  absolute;
+    top:  0;
+   left:  0;
+   width:  100%;
+   height:  100%;
+    transition:  0.25s;
+   z-index:  -1;
 
-  &.show {
-    z-index: 1;
-  }
+   &.show  {
+     z-index:  1;
+   }
 
-  .bg {
+   .bg  {
+    position: absolute;
     width: 100%;
-    height: auto;
+    height: 100%;
     top: 0;
     left: 0;
     opacity: 1;
-    position: fixed;
     z-index: -999;
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-size: cover;
-    &.video {
-    // 如果需要对视频背景进行特殊样式处理，可以在这里添加
-  }
-  }
+    object-fit: cover;
+   }
+
+
+
+
+
+
+
+
+
+
+
   // .bg {
   //   position: absolute;
   //   left: 0;
@@ -150,22 +158,22 @@ onBeforeUnmount(() => {
   //   // 如果需要对视频背景进行特殊样式处理，可以在这里添加
   // }
   // }
-  .gray {
-    opacity: 1;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-image: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%),
-      radial-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.3) 166%);
+  // .gray {
+  //   opacity: 1;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 0;
+  //   width: 100%;
+  //   height: 100%;
+  //   background-image: radial-gradient(rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0.5) 100%),
+  //     radial-gradient(rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.3) 166%);
 
-    transition: 1.5s;
-    &.hidden {
-      opacity: 0;
-      transition: 1.5s;
-    }
-  }
+  //   transition: 1.5s;
+  //   &.hidden {
+  //     opacity: 0;
+  //     transition: 1.5s;
+  //   }
+  // }
   .down {
     font-size: 16px;
     color: white;

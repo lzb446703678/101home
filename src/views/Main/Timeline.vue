@@ -85,7 +85,7 @@ export default {
 #line {
     width: 100%;
     height: 220px;
-    font-size: 13px;
+    font-size: 14px;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
     /* 隐藏滚动条，但仍然允许滚动 */
@@ -107,7 +107,7 @@ export default {
     list-style: none;
     position: relative;
     padding: 15px 0px 0px 15px;
-    border-left: 2px solid #d5d5d5;
+    border-left: 2px solid #000;
     border-radius: 0;
     scroll-snap-align: end;
     color: var(--main-text-color);
@@ -117,16 +117,16 @@ export default {
     animation: colorFlash 1s ease infinite;
 }
 .first-event-date {
-  color: #ffffff; /* 第一个事件的日期颜色 */
+  color: #000; /* 第一个事件的日期颜色 */
 }
 .event-date {
-  color: #cccccc; /* 其他事件的日期颜色 */
+  color: #444; /* 其他事件的日期颜色 */
 }
 .first-event-description {
-  color: #ffffff; /* 第一个事件的描述颜色 */
+  color: #000; /* 第一个事件的描述颜色 */
 }
 .event-description {
-  color: #dddddd; /* 其他事件的描述颜色 */
+  color: #444; /* 其他事件的描述颜色 */
 }
 
 @keyframes colorFlash {
@@ -137,7 +137,7 @@ export default {
 .first-focus {
     width: 17px;
     height: 2px;
-    background-color: rgb(255 255 255);
+    background-color: #000000;
     position: absolute;
     left: -9px;
     top: 23px;
@@ -147,7 +147,7 @@ export default {
 .focus {
     width: 15px;
     height: 2px;
-    background-color: #bbbbbb;
+    background-color: #222222;
     position: absolute;
     left: -9px;
     top: 23px;
