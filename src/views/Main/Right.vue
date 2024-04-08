@@ -2,8 +2,8 @@
   <div :class="store.mobileOpenState ? 'right' : 'right hidden'">
     <!-- 移动端 Logo -->
     <div class="logo text-hidden" @click="store.mobileFuncState = !store.mobileFuncState">
-      <span class="bg">{{ siteUrl[0] }}</span>
-      <span class="sm">.{{ siteUrl[1] }}</span>
+      <span class="bg"  style="color: #0086d1;">{{ siteUrl[0] }}</span>
+      <span class="sm"  style="color: #0086d1;">.{{ siteUrl[1] }}</span>
     </div>
     <!-- 添加图片 -->
     <!-- <img class="promo-image" src="https://img.101jc.com/img/gongzhonghao.png!yuantu80" alt="Promotion"> -->

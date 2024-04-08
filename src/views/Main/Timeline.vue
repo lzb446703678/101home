@@ -61,7 +61,7 @@ export default {
   getDescriptionHtml(description) {
     // 正则表达式匹配Markdown风格的链接
     const regex = /\[([^\]]+)\]\((https?:\/\/[^\s]+)\)/g;
-    let html = description.replace(regex, '<a href="$2" target="_blank" style="color: #0086d1;text-decoration: none; cursor: pointer !important;" class="custom-link" onmouseover="this.style.color=\'#00ffff\'; this.style.textDecoration=\'underline\'" onmouseout="this.style.color=\'#0086d1\'; this.style.textDecoration=\'none\'">$1</a>');
+    let html = description.replace(regex, '<a href="$2" target="_blank" style="color: #555555;text-decoration: none; cursor: pointer !important;" class="custom-link" onmouseover="this.style.color=\'#00ffff\'; this.style.textDecoration=\'underline\'" onmouseout="this.style.color=\'#000000\'; this.style.textDecoration=\'none\'">$1</a>');
     // 将<br>标签转换为换行
     html = html.replace(/<br>/g, '</br>');
     return html;
@@ -117,16 +117,16 @@ export default {
     animation: colorFlash 1s ease infinite;
 }
 .first-event-date {
-  color: #fff; /* 第一个事件的日期颜色 */
+  color: #ffffff; /* 第一个事件的日期颜色 */
 }
 .event-date {
-  color: #DDD; /* 其他事件的日期颜色 */
+  color: #fff; /* 其他事件的日期颜色 */
 }
 .first-event-description {
-  color: #fff; /* 第一个事件的描述颜色 */
+  color: #ffffff; /* 第一个事件的描述颜色 */
 }
 .event-description {
-  color: #DDD; /* 其他事件的描述颜色 */
+  color: #fff; /* 其他事件的描述颜色 */
 }
 
 @keyframes colorFlash {

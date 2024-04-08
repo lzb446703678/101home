@@ -76,7 +76,7 @@ export default {
 .text-carousel .cursor {
   animation: blink 1s step-start infinite;
   font-size: 22px;
-  color: #38BDF8;
+  color: #ffffff;
 }
 
 @keyframes blink {
