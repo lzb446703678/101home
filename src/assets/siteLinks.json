@@ -1,39 +1,50 @@
 [
   {
+    "icon": "Blog",
+    "name": "博客",
+    "link": "https://blog.101jc.com/"
+  },
+  {
     "icon": "LocationArrow",
     "name": "101导航",
     "link": "https://tab.101jc.com"
   },
   {
-    "icon": "Book",
-    "name": "101知识库",
-    "link": "https://lib.101jc.com/"
+    "icon": "PhotoVideo",
+    "name": "时光相册",
+    "link": "https://pic.101jc.com"
   },
-  {
-    "icon": "Warehouse",
-    "name": "101储物间",
-    "link": "https://pan.101jc.com/"
-  },
+
   {
     "icon": "BookOpen",
     "name": "101速查手册",
     "link": "https://memo.101jc.com"
   },
   {
-    "icon": "Blog",
-    "name": "博客",
-    "link": "https://blog.101jc.com/"
+    "icon": "UserFriends",
+    "name": "友链",
+    "link": "https://blog.101jc.com/links"
+  },
+  {
+    "icon": "UserCircle",
+    "name": "关于我",
+    "link": "https://blog.101jc.com/about"
+  },
+  {
+    "icon": "Warehouse",
+    "name": "101储物间",
+    "link": "https://pan.101jc.com/"
   },
 
-  {
-    "icon": "PhotoVideo",
-    "name": "时光相册",
-    "link": "https://pic.101jc.com"
-  },
   {
     "icon": "Fire",
     "name": "今日热点",
     "link": "https://hot.101jc.com/"
+  },
+  {
+    "icon": "Book",
+    "name": "101知识库",
+    "link": "https://lib.101jc.com/"
   },
 
   {
@@ -46,16 +57,7 @@
     "name": "工具箱",
     "link": "https://tool.101jc.com/"
   },
-  {
-    "icon": "UserFriends",
-    "name": "友链",
-    "link": "https://blog.101jc.com/links"
-  },
-  {
-    "icon": "UserCircle",
-    "name": "关于我",
-    "link": "https://blog.101jc.com/about"
-  },
+
   {
     "icon": "Compass",
     "name": "更新日志",
