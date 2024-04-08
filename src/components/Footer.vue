@@ -10,11 +10,11 @@
             -
           </span>
           {{ fullYear }}
-          <a :href="siteUrl" style="color:#38BDF8">{{ siteAnthor }}</a>
+          <a :href="siteUrl" style="color:#DBE2EC">{{ siteAnthor }}</a>
         </span>
         <span class="hidden">
           &nbsp;&nbsp; Based On
-        <a href="https://github.com/imsyy" target="_blank" style="color:#38BDF8">imsyy</a>
+        <a href="https://github.com/imsyy" target="_blank" style="color:#DBE2EC">imsyy</a>
         's Project
       </span>
         <!-- 以下信息请不要修改哦 -->
@@ -38,7 +38,7 @@
         </a>
         <span v-if="visitorData" class="hidden">
           <!-- 索引1：最近访客数，索引3：今日访客数，索引5：今日访问量，索引7：昨日访客数，索引9：昨日访问量，索引11：本月访问量，索引13：总访问量 -->
-          &nbsp | &nbsp今日访问量 <span style="color:#38BDF8;">{{ visitorData[5] }}</span>&nbsp | &nbsp总访问量 <span style="color:#38BDF8">{{ visitorData[13] }}</span>&nbsp | &nbsp已持续运行 <span style="color:#38BDF8">{{ runningDays }}</span> 天&nbsp | &nbsp
+          &nbsp | &nbsp今日访问量 <span style="color:#DBE2EC;">{{ visitorData[5] }}</span>&nbsp | &nbsp总访问量 <span style="color:#DBE2EC">{{ visitorData[13] }}</span>&nbsp | &nbsp已持续运行 <span style="color:#DBE2EC">{{ runningDays }}</span> 天&nbsp | &nbsp
         </span>
 
       </div>

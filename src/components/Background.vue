@@ -117,18 +117,20 @@ onBeforeUnmount(() => {
      z-index:  1;
    }
 
-   .bg  {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 1;
-    z-index: -999;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    object-fit: cover;
-   }
+   .bg {
+  position: fixed;
+  width: 100%;
+  min-height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: -999;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center top; /* 确保背景图片从顶部开始显示，底部溢出部分被裁掉 */
+  object-fit: cover;
+}
+
 
 
 

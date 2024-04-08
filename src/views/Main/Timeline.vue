@@ -61,7 +61,7 @@ export default {
   getDescriptionHtml(description) {
     // 正则表达式匹配Markdown风格的链接
     const regex = /\[([^\]]+)\]\((https?:\/\/[^\s]+)\)/g;
-    let html = description.replace(regex, '<a href="$2" target="_blank" style="color: #38BDF8;text-decoration: none; cursor: pointer !important;" class="custom-link" onmouseover="this.style.color=\'#00ffff\'; this.style.textDecoration=\'underline\'" onmouseout="this.style.color=\'#38BDF8\'; this.style.textDecoration=\'none\'">$1</a>');
+    let html = description.replace(regex, '<a href="$2" target="_blank" style="color: #DBE2EC;text-decoration: none; cursor: pointer !important;" class="custom-link" onmouseover="this.style.color=\'#00ffff\'; this.style.textDecoration=\'underline\'" onmouseout="this.style.color=\'#DBE2EC\'; this.style.textDecoration=\'none\'">$1</a>');
     // 将<br>标签转换为换行
     html = html.replace(/<br>/g, '</br>');
     return html;
