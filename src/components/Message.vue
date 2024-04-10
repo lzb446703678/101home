@@ -4,13 +4,23 @@
     <!-- Logo -->
     <div class="logo">
       <img class="logo-img" :src="siteLogo" alt="logo" />
-      <div :class="{ name: true, 'text-hidden': true, long: siteUrl[0].length >= 6 }">
-        <span class="bg" style="color: #0086d1;">{{ siteUrl[0] }}</span>
-        <span class="sm" style="color: #0086d1;">.{{ siteUrl[1] }}</span>
-      </div>
+      <!-- <div :class="{ name: true, 'text-hidden': true, long: siteUrl[0].length >= 6 }">
+        <span class="bg" style="color: #000000;">{{ siteUrl[0] }}</span>
+        <span class="sm" style="color: #000000;">.{{ siteUrl[1] }}</span>
+      </div> -->
     </div>
+    <div className="SelfDescription">
+            <div className="SayWords">
+               <div>
+                   <h2>Hi!👋</h2>
+                   <h2>I'm <span className="highlight">旅者Bin</span></h2>
+               </div>
+                <h3>一名“全干”检测工程师</h3>
+
+                </div>
+            </div>
     <!-- 简介 -->
-    <div class="description cards" @click="changeBox">
+    <!-- <div class="description cards" @click="changeBox">
       <div class="content">
         <Icon size="16">
           <QuoteLeft />
@@ -25,7 +35,7 @@
           <QuoteRight />
         </Icon>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 
@@ -94,11 +104,14 @@ watch(
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center; /* 添加这行来确保子元素水平居中 */
     animation: fade 0.5s;
     max-width: 460px;
     .logo-img {
       border-radius: 50%;
-      width: 175px;
+      width: 300px;// 175px
+      transform: translate(-120px, 60px);//
+
     }
     .name {
       width: 100%;
@@ -120,7 +133,8 @@ watch(
     }
     @media (max-width: 768px) {
       .logo-img {
-        width: 100px;
+        width: 200px;//100px
+        transform: translate(0px, 0px);//
       }
       .name {
         height: 128px;
@@ -192,6 +206,68 @@ watch(
     }
   }
 }
+.SelfDescription {
+  position: relative;
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: flex-start; /* 默认在大屏幕上靠左对齐 */
+  align-items: center;
+
+  @media only screen and (max-width: 1200px) {
+    justify-content: center; /* 在非桌面端屏幕宽度小于1200px时居中对齐 */
+  }
+}
+
+.homeTyped {
+  position: absolute;
+  bottom: 100px;
+  font-weight: 700;
+}
+
+.SayWords {
+  animation: left-in 1s forwards;
+}
+
+/* 在此处调整SayWords的样式可以确保它在所有屏幕尺寸下都正确显示 */
+@media only screen and (max-width: 1200px) {
+  .SayWords {
+    /* 确保在小屏幕上SayWords也使用中心对齐的方式 */
+    // text-align: center; /* 对于文本内容进行居中 */
+  }
+
+  .SayWords h2, .SayWords h3 {
+    /* 如果有必要，调整具体元素的样式以确保它们在小屏幕上也是居中的 */
+  }
+}
+
+.SayWords h2 {
+  font-size: 80px;
+  font-weight: 900;
+  color: #000;
+}
+
+.SayWords .highlight {
+  color: #0086D1;
+}
+
+.SayWords h3 {
+  font-size: 40px;
+  color: #000;
+}
+
+@media only screen and (max-width: 768px) {
+  .SayWords h2 {
+    font-size: 60px; /* 较小的屏幕上减小为60px */
+  }
+
+  .SayWords h3 {
+    font-size: 30px; /* 较小的屏幕上减小为30px */
+  }
+}
+
+
+
 .lunbo-container {
   display: flex;
   justify-content: left;

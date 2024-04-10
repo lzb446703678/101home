@@ -2,13 +2,13 @@
   <div :class="store.mobileOpenState ? 'left hidden' : 'left'">
     <Message />
     <div class="hidden">
-      <div class="line">
+      <!-- <div class="line">
   <img src="https://img.101jc.com/img/Compass-dark.svg" alt="Link Icon" style="width: 20px; height: 20px;">
   <span class="title" style="color: #000000;">更新日志</span>
-</div>
+</div> -->
     
     <div class="cards-timeline" style="max-width: 465px; display: flex;">
-      <Timeline />
+      <!-- <Timeline /> -->
       <!-- <img class="hidden" src="https://img.101jc.com/img/gongzhonghao6.png" alt="GongZhongHao" style="height: 220px; margin-left:auto;"> -->
     </div>
   </div>
@@ -48,7 +48,7 @@ const siteIcon = {
   // flex: 1 0 0%;
   width: 50%;
   margin-right: 0px;
-  transform: translateY(-83px);
+  transform: translateY(-70px);
   &.hidden {
     display: none;
   }
