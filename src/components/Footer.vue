@@ -41,8 +41,8 @@
           <!-- 索引1：最近访客数，索引3：今日访客数，索引5：今日访问量，索引7：昨日访客数，索引9：昨日访问量，索引11：本月访问量，索引13：总访问量 -->
           &nbsp | &nbsp今日访问量 <span style="color:#000000;">{{ visitorData[5] }}</span>&nbsp | &nbsp总访问量 <span style="color:#000000">{{ visitorData[13] }}</span>&nbsp | &nbsp已持续运行 <span style="color:#000000">{{ runningDays }}</span> 天&nbsp | &nbsp
         </span>
-        <span class="name1">101</span>
-        <span class="name2">JC.COM</span>
+        <!-- <span class="name1">101</span>
+        <span class="name2">JC.COM</span> -->
       </div>
       <div v-else class="lrc">
         <Transition name="fade" mode="out-in">
