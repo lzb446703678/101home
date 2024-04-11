@@ -48,7 +48,7 @@ const siteIcon = {
   // flex: 1 0 0%;
   width: 50%;
   margin-right: 0px;
-  transform: translateY(-70px);
+  transform: translateY(-40px);
   &.hidden {
     display: none;
   }

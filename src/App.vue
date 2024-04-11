@@ -232,12 +232,12 @@ onBeforeUnmount(() => {
     .i-icon {
       transform: translateY(2px);
     }
-    @media (min-width: 721px) {
+    @media (min-width: 821px) {
       display: none;
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 821px) {
     .hidden {
       display: none;
     }

@@ -138,7 +138,7 @@ onUnmounted(() => {
     margin-right: 12px;
     animation: fade 0.5s;
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 821px) {
     .icon-ly {
         display: none !important;
         margin: 0 12px;

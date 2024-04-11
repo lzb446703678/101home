@@ -16,6 +16,7 @@
                    <h2>I'm <span className="highlight">旅者Bin</span></h2>
                </div>
                 <h3>一名“全干”检测工程师</h3>
+                <!-- <h4>Welcome To My Homepage</h4> -->
 
                 </div>
             </div>
@@ -109,9 +110,9 @@ watch(
     max-width: 460px;
     .logo-img {
       border-radius: 50%;
-      width: 300px;// 175px
-      transform: translate(-120px, 60px);//
-
+      width: 240px;// 175px
+      transform: translate(-120px, 0px);//
+      border: 5px solid white;
     }
     .name {
       width: 100%;
@@ -131,10 +132,10 @@ watch(
         }
       }
     }
-    @media (max-width: 768px) {
+    @media (max-width: 820px) {
       .logo-img {
-        width: 200px;//100px
-        transform: translate(0px, 0px);//
+        width: 180px;//100px
+        transform: translate(0px, -20px);//
       }
       .name {
         height: 128px;
@@ -209,13 +210,14 @@ watch(
 .SelfDescription {
   position: relative;
   width: 100%;
-  height: 30vh;
+  height: 300px;
   display: flex;
   justify-content: flex-start; /* 默认在大屏幕上靠左对齐 */
   align-items: center;
 
-  @media only screen and (max-width: 1200px) {
+  @media only screen and (max-width: 820px) {
     justify-content: center; /* 在非桌面端屏幕宽度小于1200px时居中对齐 */
+    height: 200px;
   }
 }
 
@@ -227,18 +229,6 @@ watch(
 
 .SayWords {
   animation: left-in 1s forwards;
-}
-
-/* 在此处调整SayWords的样式可以确保它在所有屏幕尺寸下都正确显示 */
-@media only screen and (max-width: 1200px) {
-  .SayWords {
-    /* 确保在小屏幕上SayWords也使用中心对齐的方式 */
-    // text-align: center; /* 对于文本内容进行居中 */
-  }
-
-  .SayWords h2, .SayWords h3 {
-    /* 如果有必要，调整具体元素的样式以确保它们在小屏幕上也是居中的 */
-  }
 }
 
 .SayWords h2 {
@@ -256,7 +246,9 @@ watch(
   color: #000;
 }
 
-@media only screen and (max-width: 768px) {
+
+
+@media only screen and (max-width: 1181px) {
   .SayWords h2 {
     font-size: 60px; /* 较小的屏幕上减小为60px */
   }

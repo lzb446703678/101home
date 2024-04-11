@@ -160,7 +160,7 @@ const runningDays = computed(() => {
       font-size: 0.85rem;
     }
   }
-  @media (max-width: 480px) {
+  @media (max-width: 1024px) {
     .hidden {
       display: none;
     }
