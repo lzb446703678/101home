@@ -12,6 +12,7 @@
           {{ fullYear }}
           <a :href="siteUrl" style="color:#000000">{{ siteAnthor }}</a>
         </span>
+        
         <span class="hidden">
           &nbsp;&nbsp; Based On
         <a href="https://github.com/imsyy" target="_blank" style="color:#000000">imsyy</a>
@@ -40,7 +41,7 @@
           <!-- 索引1：最近访客数，索引3：今日访客数，索引5：今日访问量，索引7：昨日访客数，索引9：昨日访问量，索引11：本月访问量，索引13：总访问量 -->
           &nbsp | &nbsp今日访问量 <span style="color:#000000;">{{ visitorData[5] }}</span>&nbsp | &nbsp总访问量 <span style="color:#000000">{{ visitorData[13] }}</span>&nbsp | &nbsp已持续运行 <span style="color:#000000">{{ runningDays }}</span> 天&nbsp | &nbsp
         </span>
-
+        <span class="name">101JC.COM</span>
       </div>
       <div v-else class="lrc">
         <Transition name="fade" mode="out-in">
@@ -71,7 +72,7 @@ const siteGONGAN = ref(import.meta.env.VITE_SITE_GONGAN);
 const siteAnthor = ref(import.meta.env.VITE_SITE_ANTHOR);
 const siteUrl = computed(() => {
   const url = import.meta.env.VITE_SITE_URL;
-  if (!url) return "https://www.imsyy.top";
+  if (!url) return "https://101jc.com";
   // 判断协议前缀
   if (!url.startsWith("http://") && !url.startsWith("https://")) {
     return "//" + url;
@@ -122,6 +123,13 @@ const runningDays = computed(() => {
   font-size: 14px;
   .power {
     animation: fade 0.3s;
+  }
+  .name {
+      width: 100%;
+      padding-left: 0px;
+      transform: translateY(-8px);
+      font-family: "Pacifico-Regular";
+      color:#0086d1;
   }
   .lrc {
     padding: 0 20px;
