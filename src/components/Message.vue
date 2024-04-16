@@ -4,6 +4,7 @@
     <!-- Logo -->
     <div class="logo">
       <img class="logo-img" :src="siteLogo" alt="logo" />
+      <div class="border-overlay"></div> <!-- 新增加的透明边框元素 -->
       <!-- <div :class="{ name: true, 'text-hidden': true, long: siteUrl[0].length >= 6 }">
         <span class="bg" style="color: #000000;">{{ siteUrl[0] }}</span>
         <span class="sm" style="color: #000000;">.{{ siteUrl[1] }}</span>
@@ -105,15 +106,35 @@ watch(
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center; /* 添加这行来确保子元素水平居中 */
+    justify-content: center; /* 确保子元素水平居中 */
     animation: fade 0.5s;
     max-width: 460px;
+    position: relative; // 添加定位以便于边框覆盖
+
     .logo-img {
       border-radius: 50%;
-      width: 240px;// 175px
-      transform: translate(-120px, 0px);//
-      border: 5px solid white;
+      width: 240px;
+      transform: translate(-120px, 0px);
+      z-index:1;
+      transform-origin: center bottom; // 设置变换的原点为底部中心
+      transition: 0.5s;
+      // border: 5px solid white; // 移除这里的边框
     }
+
+    .border-overlay {
+      position: absolute; // 绝对定位来覆盖logo-img
+      top: 0; // 与logo-img对齐
+      left: 50%; // 与logo-img对齐
+      transform: translate(-240px, 0px);
+      border: 5px solid white; // 这里是新的边框样式
+      border-radius: 50%; // 与logo-img保持一致
+      width: 240px; // 与logo-img保持一致
+      height: 240px; // 与宽度保持一致来维持圆形
+      pointer-events: none; // 确保不会影响对logo-img的交互
+      z-index:2;
+      transition: 0.5s;
+    }
+
     .name {
       width: 100%;
       padding-left: 0px;
@@ -137,6 +158,11 @@ watch(
         width: 180px;//100px
         transform: translate(0px, -20px);//
       }
+      .border-overlay {
+        width: 180px;//100px
+        height: 180px;
+        transform: translate(-90px, -20px);//
+      }
       .name {
         height: 128px;
         .bg {
@@ -149,7 +175,15 @@ watch(
       max-width: 100%;
     }
   }
-
+  .logo:hover .logo-img{
+    transform: translate(-120px, -10px) scale(1.1); // 同时应用平移和缩放
+    z-index: 999;
+    }
+  .logo:hover .border-overlay{
+    background-color: #fff;
+    box-shadow: 0 35px 35px -8px rgba(0, 0, 0, 0.7); // 光晕效果
+    transform: translate(-240px, -11px) perspective(500px) rotateX(25deg)
+  }
   .description {
     padding: 1rem;
     margin-top: 0.5rem;
