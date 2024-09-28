@@ -6,13 +6,13 @@
 
 本项目修改自[home](https://github.com/imsyy/home)项目，原作者是[imsyy](https://github.com/imsyy)。
 
-![旅者Bin的主页](public/screenshots/main.png)
+![Bin的主页](public/screenshots/main.png)
 
 ### 我的Demo
 
 >由于 CDN 缓存原因，查看最新效果可能需要 `Ctrl` + `F5` 强制刷新浏览器缓存
 
-- [旅者Bin的主页](https://101jc.com)
+- [Bin的主页](https://101jc.com)
 
 ### 原作者Demo
 

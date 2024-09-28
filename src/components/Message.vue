@@ -14,7 +14,7 @@
             <div className="SayWords">
                <div>
                    <h2>Hi!👋</h2>
-                   <h2>I'm <span className="highlight">旅者Bin</span></h2>
+                   <h2>I'm <span className="highlight">Bin</span></h2>
                </div>
                 <h3>一名“全干”检测工程师</h3>
                 <!-- <h4>Welcome To My Homepage</h4> -->
@@ -175,15 +175,19 @@ watch(
       max-width: 100%;
     }
   }
-  .logo:hover .logo-img{
-    transform: translate(-120px, -10px) scale(1.1); // 同时应用平移和缩放
-    z-index: 999;
+  @media (min-width: 1024px) {
+    .logo:hover .logo-img {
+        transform: translate(-120px, -10px) scale(1.1);
+        z-index: 999;
     }
-  .logo:hover .border-overlay{
-    background-color: #fff;
-    box-shadow: 0 35px 35px -8px rgba(0, 0, 0, 0.7); // 光晕效果
-    transform: translate(-240px, -11px) perspective(500px) rotateX(25deg)
-  }
+
+    .logo:hover .border-overlay {
+        background-color: #fff;
+        box-shadow: 0 35px 35px -8px rgba(0, 0, 0, 0.7);
+        transform: translate(-240px, -12px) perspective(500px) rotateX(25deg);
+    }
+}
+
   .description {
     padding: 1rem;
     margin-top: 0.5rem;
