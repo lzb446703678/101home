@@ -14,7 +14,7 @@
             <div className="SayWords">
                <div>
                    <h2>Hi!👋</h2>
-                   <h2>I'm <span className="highlight">Bin</span></h2>
+                   <h2>I'm <span className="highlight">旅者Bin</span></h2>
                </div>
                 <h3>一名“全干”检测工程师</h3>
                 <!-- <h4>Welcome To My Homepage</h4> -->
@@ -273,6 +273,7 @@ watch(
   font-size: 80px;
   font-weight: 900;
   color: #000;
+
 }
 
 .SayWords .highlight {
