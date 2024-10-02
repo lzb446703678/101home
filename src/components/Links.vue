@@ -1,9 +1,9 @@
 <template>
   <div v-if="siteLinks[0]" class="links">
     <div class="line">
-  <img src="https://img.101jc.com/img/Link-dark.svg" alt="Link Icon" style="width: 20px; height: 20px;">
-  <span class="title" style="color: #000000;">网站列表</span>
-</div>
+      <img src="https://img.101jc.com/img/Link-dark.svg" alt="Link Icon" style="width: 20px; height: 20px;">
+      <span class="title" style="color: #000000;">网站列表</span>
+    </div>
 
     <!-- 网站列表 -->
     <Swiper
@@ -26,9 +26,14 @@
               :style="index < 3 ? 'margin-bottom: 20px' : null"
               @click="jumpLink(item)"
             >
-              <Icon size="26">
-                <component :is="siteIcon[item.icon]" />
-              </Icon>
+              <template v-if="item.name === '项目主页'">
+                <img src="https://img.101jc.com/img/ejiance-logo.svg" alt="项目主页 Icon" style="width: 26px; height: 26px;">
+              </template>
+              <template v-else>
+                <Icon size="26">
+                  <component :is="siteIcon[item.icon]" />
+                </Icon>
+              </template>
               <span class="name text-hidden">{{ item.name }}</span>
             </div>
           </el-col>
@@ -41,8 +46,7 @@
 
 <script setup>
 import { Icon } from "@vicons/utils";
-// 可前往 https://www.xicons.org 自行挑选并在此处引入
-import { Link, Blog, CompactDisc, Cloud, Compass, Book, Fire, LaptopCode,  Toolbox,UserCircle,LocationArrow,PhotoVideo, UserFriends,Inbox,Warehouse,BookOpen} from "@vicons/fa"; // 注意使用正确的类别
+import { Link, Blog, CompactDisc, Cloud, Compass, Book, Fire, LaptopCode, Toolbox, UserCircle, LocationArrow, PhotoVideo, UserFriends, Inbox, Warehouse, BookOpen } from "@vicons/fa";
 import { mainStore } from "@/store";
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Pagination, Mousewheel } from "swiper";
@@ -80,21 +84,19 @@ const siteIcon = {
 };
 
 // 链接跳转
-// 链接跳转
 const jumpLink = (data) => {
   if (data.name === "音乐" && store.musicClick) {
     if (typeof $openList === "function") $openList();
   } else {
-    // 使用window.location.href在当前页面打开链接
     window.location.href = data.link;
   }
 };
-
 
 onMounted(() => {
   console.log(siteLinks);
 });
 </script>
+
 
 <style lang="scss" scoped>
 .links {

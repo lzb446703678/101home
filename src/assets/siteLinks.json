@@ -1,5 +1,10 @@
 [
   {
+    "icon": "UserFriends",
+    "name": "项目主页",
+    "link": "https://ejiance.com"
+  },
+  {
     "icon": "Blog",
     "name": "博客",
     "link": "https://blog.101jc.com/"
@@ -9,11 +14,7 @@
     "name": "101导航",
     "link": "https://tab.101jc.com"
   },
-  {
-    "icon": "PhotoVideo",
-    "name": "时光相册",
-    "link": "https://pic.101jc.com"
-  },
+
 
   {
     "icon": "BookOpen",
@@ -21,19 +22,20 @@
     "link": "https://memo.101jc.com"
   },
   {
-    "icon": "UserFriends",
-    "name": "友链",
-    "link": "https://blog.101jc.com/links"
+    "icon": "Warehouse",
+    "name": "101储物间",
+    "link": "https://pan.101jc.com/"
   },
   {
     "icon": "UserCircle",
     "name": "关于我",
     "link": "https://blog.101jc.com/about"
   },
+
   {
-    "icon": "Warehouse",
-    "name": "101储物间",
-    "link": "https://pan.101jc.com/"
+    "icon": "PhotoVideo",
+    "name": "时光相册",
+    "link": "https://pic.101jc.com"
   },
 
   {
@@ -42,25 +44,9 @@
     "link": "https://hot.101jc.com/"
   },
   {
-    "icon": "Book",
-    "name": "101知识库",
-    "link": "https://lib.101jc.com/"
-  },
-
-  {
     "icon": "LaptopCode",
-    "name": "站点监测",
-    "link": "https://site.101jc.com"
-  },
-  {
-    "icon": "Toolbox",
-    "name": "工具箱",
-    "link": "https://tool.101jc.com/"
-  },
-
-  {
-    "icon": "Compass",
-    "name": "更新日志",
-    "link": "https://log.101jc.com/"
+    "name": "服务器监控",
+    "link": "https://scan.101jc.com/"
   }
+
 ]
