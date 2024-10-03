@@ -16,10 +16,10 @@
         <img class="icon" src="https://img.101jc.com/img/wechat-dark.png" height="24" />
         <div class="iconTip"></div>
       </a>
-      <a href="javascript:void(0)" @click="toggleMessageBox" @mouseenter="socialTip = '留言'">
+      <!-- <a href="javascript:void(0)" @click="toggleMessageBox" @mouseenter="socialTip = '留言'">
       <img class="icon-ly" src="https://img.101jc.com/img/liuyan-dark.png" height="24" />
       <div class="iconTip"></div>
-    </a>
+    </a> -->
     </div>
     <span class="tip" v-show="!isWechatImageVisible">{{ socialTip }}</span>
     <div v-show="isWechatImageVisible" class="wechat-popup" @click.stop>
