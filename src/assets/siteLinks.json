@@ -5,6 +5,11 @@
     "link": "https://ejiance.101jc.com"
   },
   {
+    "icon": "Toolbox",
+    "name": "检测工具箱",
+    "link": "https://tools.101jc.com/"
+  },
+  {
     "icon": "Blog",
     "name": "博客",
     "link": "https://blog.101jc.com/"
@@ -31,7 +36,6 @@
     "name": "关于我",
     "link": "https://blog.101jc.com/about"
   },
-
   {
     "icon": "PhotoVideo",
     "name": "时光相册",
